@@ -1,0 +1,50 @@
+﻿@model bookstore.Models.Order
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Order</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.oderDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.oderDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.deliveryDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.deliveryDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User.username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.username)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdOrder }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

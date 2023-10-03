@@ -1,0 +1,555 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Book_StoreModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Author">
+          <Key>
+            <PropertyRef Name="IdAu" />
+          </Key>
+          <Property Name="IdAu" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="phone" Type="char" MaxLength="10" />
+          <Property Name="address" Type="nvarchar" MaxLength="50" />
+          <Property Name="story" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Book">
+          <Key>
+            <PropertyRef Name="IdBook" />
+          </Key>
+          <Property Name="IdBook" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nameBook" Type="nvarchar" MaxLength="500" />
+          <Property Name="description" Type="nvarchar(max)" />
+          <Property Name="price" Type="int" />
+          <Property Name="image" Type="varchar" MaxLength="50" />
+          <Property Name="quality" Type="int" />
+          <Property Name="IdCate" Type="int" />
+          <Property Name="IdPub" Type="int" />
+        </EntityType>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="IdCate" />
+          </Key>
+          <Property Name="IdCate" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="OrderDetail">
+          <Key>
+            <PropertyRef Name="IdBook" />
+            <PropertyRef Name="IdOrder" />
+          </Key>
+          <Property Name="IdBook" Type="int" Nullable="false" />
+          <Property Name="IdOrder" Type="int" Nullable="false" />
+          <Property Name="quanlity" Type="int" />
+          <Property Name="price" Type="int" />
+        </EntityType>
+        <EntityType Name="Orders">
+          <Key>
+            <PropertyRef Name="IdOrder" />
+          </Key>
+          <Property Name="IdOrder" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="status" Type="nvarchar" MaxLength="50" />
+          <Property Name="oderDate" Type="date" />
+          <Property Name="deliveryDate" Type="date" />
+          <Property Name="MaKH" Type="int" />
+        </EntityType>
+        <EntityType Name="Participate">
+          <Key>
+            <PropertyRef Name="IdAu" />
+            <PropertyRef Name="IdBook" />
+          </Key>
+          <Property Name="IdAu" Type="int" Nullable="false" />
+          <Property Name="IdBook" Type="int" Nullable="false" />
+          <Property Name="role" Type="nvarchar" MaxLength="50" />
+          <Property Name="location" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Publisher">
+          <Key>
+            <PropertyRef Name="IdPub" />
+          </Key>
+          <Property Name="IdPub" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="phone" Type="char" MaxLength="10" />
+          <Property Name="address" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="IdUser" />
+          </Key>
+          <Property Name="IdUser" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="username" Type="varchar" MaxLength="20" />
+          <Property Name="password" Type="varchar(max)" />
+          <Property Name="confirmPassword" Type="varchar(max)" />
+          <Property Name="role" Type="varchar" MaxLength="10" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="address" Type="nvarchar" MaxLength="50" />
+          <Property Name="email" Type="varchar" MaxLength="50" />
+          <Property Name="phone" Type="char" MaxLength="10" />
+        </EntityType>
+        <Association Name="FK__Book__IdCate__5441852A">
+          <End Role="Category" Type="Self.Category" Multiplicity="0..1" />
+          <End Role="Book" Type="Self.Book" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="IdCate" />
+            </Principal>
+            <Dependent Role="Book">
+              <PropertyRef Name="IdCate" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Book__IdPub__5535A963">
+          <End Role="Publisher" Type="Self.Publisher" Multiplicity="0..1" />
+          <End Role="Book" Type="Self.Book" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Publisher">
+              <PropertyRef Name="IdPub" />
+            </Principal>
+            <Dependent Role="Book">
+              <PropertyRef Name="IdPub" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__OrderDeta__IdBoo__5BE2A6F2">
+          <End Role="Book" Type="Self.Book" Multiplicity="1" />
+          <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Book">
+              <PropertyRef Name="IdBook" />
+            </Principal>
+            <Dependent Role="OrderDetail">
+              <PropertyRef Name="IdBook" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__OrderDeta__IdOrd__5CD6CB2B">
+          <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
+          <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Orders">
+              <PropertyRef Name="IdOrder" />
+            </Principal>
+            <Dependent Role="OrderDetail">
+              <PropertyRef Name="IdOrder" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Orders__MaKH__4F7CD00D">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="IdUser" />
+            </Principal>
+            <Dependent Role="Orders">
+              <PropertyRef Name="MaKH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Participa__IdBoo__59063A47">
+          <End Role="Book" Type="Self.Book" Multiplicity="1" />
+          <End Role="Participate" Type="Self.Participate" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Book">
+              <PropertyRef Name="IdBook" />
+            </Principal>
+            <Dependent Role="Participate">
+              <PropertyRef Name="IdBook" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Participat__IdAu__5812160E">
+          <End Role="Author" Type="Self.Author" Multiplicity="1" />
+          <End Role="Participate" Type="Self.Participate" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Author">
+              <PropertyRef Name="IdAu" />
+            </Principal>
+            <Dependent Role="Participate">
+              <PropertyRef Name="IdAu" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Book_StoreModelStoreContainer">
+          <EntitySet Name="Author" EntityType="Self.Author" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Book" EntityType="Self.Book" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OrderDetail" EntityType="Self.OrderDetail" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Participate" EntityType="Self.Participate" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Publisher" EntityType="Self.Publisher" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Book__IdCate__5441852A" Association="Self.FK__Book__IdCate__5441852A">
+            <End Role="Category" EntitySet="Category" />
+            <End Role="Book" EntitySet="Book" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Book__IdPub__5535A963" Association="Self.FK__Book__IdPub__5535A963">
+            <End Role="Publisher" EntitySet="Publisher" />
+            <End Role="Book" EntitySet="Book" />
+          </AssociationSet>
+          <AssociationSet Name="FK__OrderDeta__IdBoo__5BE2A6F2" Association="Self.FK__OrderDeta__IdBoo__5BE2A6F2">
+            <End Role="Book" EntitySet="Book" />
+            <End Role="OrderDetail" EntitySet="OrderDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK__OrderDeta__IdOrd__5CD6CB2B" Association="Self.FK__OrderDeta__IdOrd__5CD6CB2B">
+            <End Role="Orders" EntitySet="Orders" />
+            <End Role="OrderDetail" EntitySet="OrderDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Orders__MaKH__4F7CD00D" Association="Self.FK__Orders__MaKH__4F7CD00D">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Orders" EntitySet="Orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Participa__IdBoo__59063A47" Association="Self.FK__Participa__IdBoo__59063A47">
+            <End Role="Book" EntitySet="Book" />
+            <End Role="Participate" EntitySet="Participate" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Participat__IdAu__5812160E" Association="Self.FK__Participat__IdAu__5812160E">
+            <End Role="Author" EntitySet="Author" />
+            <End Role="Participate" EntitySet="Participate" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Book_StoreModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Author">
+          <Key>
+            <PropertyRef Name="IdAu" />
+          </Key>
+          <Property Name="IdAu" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="phone" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="story" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Participates" Relationship="Self.FK__Participat__IdAu__5812160E" FromRole="Author" ToRole="Participate" />
+        </EntityType>
+        <EntityType Name="Book">
+          <Key>
+            <PropertyRef Name="IdBook" />
+          </Key>
+          <Property Name="IdBook" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nameBook" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="price" Type="Int32" />
+          <Property Name="image" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="quality" Type="Int32" />
+          <Property Name="IdCate" Type="Int32" />
+          <Property Name="IdPub" Type="Int32" />
+          <NavigationProperty Name="Category" Relationship="Self.FK__Book__IdCate__5441852A" FromRole="Book" ToRole="Category" />
+          <NavigationProperty Name="Publisher" Relationship="Self.FK__Book__IdPub__5535A963" FromRole="Book" ToRole="Publisher" />
+          <NavigationProperty Name="OrderDetails" Relationship="Self.FK__OrderDeta__IdBoo__5BE2A6F2" FromRole="Book" ToRole="OrderDetail" />
+          <NavigationProperty Name="Participates" Relationship="Self.FK__Participa__IdBoo__59063A47" FromRole="Book" ToRole="Participate" />
+        </EntityType>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="IdCate" />
+          </Key>
+          <Property Name="IdCate" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Books" Relationship="Self.FK__Book__IdCate__5441852A" FromRole="Category" ToRole="Book" />
+        </EntityType>
+        <EntityType Name="OrderDetail">
+          <Key>
+            <PropertyRef Name="IdBook" />
+            <PropertyRef Name="IdOrder" />
+          </Key>
+          <Property Name="IdBook" Type="Int32" Nullable="false" />
+          <Property Name="IdOrder" Type="Int32" Nullable="false" />
+          <Property Name="quanlity" Type="Int32" />
+          <Property Name="price" Type="Int32" />
+          <NavigationProperty Name="Book" Relationship="Self.FK__OrderDeta__IdBoo__5BE2A6F2" FromRole="OrderDetail" ToRole="Book" />
+          <NavigationProperty Name="Order" Relationship="Self.FK__OrderDeta__IdOrd__5CD6CB2B" FromRole="OrderDetail" ToRole="Orders" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="IdOrder" />
+          </Key>
+          <Property Name="IdOrder" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="oderDate" Type="DateTime" Precision="0" />
+          <Property Name="deliveryDate" Type="DateTime" Precision="0" />
+          <Property Name="MaKH" Type="Int32" />
+          <NavigationProperty Name="OrderDetails" Relationship="Self.FK__OrderDeta__IdOrd__5CD6CB2B" FromRole="Orders" ToRole="OrderDetail" />
+          <NavigationProperty Name="User" Relationship="Self.FK__Orders__MaKH__4F7CD00D" FromRole="Orders" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="Participate">
+          <Key>
+            <PropertyRef Name="IdAu" />
+            <PropertyRef Name="IdBook" />
+          </Key>
+          <Property Name="IdAu" Type="Int32" Nullable="false" />
+          <Property Name="IdBook" Type="Int32" Nullable="false" />
+          <Property Name="role" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="location" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Author" Relationship="Self.FK__Participat__IdAu__5812160E" FromRole="Participate" ToRole="Author" />
+          <NavigationProperty Name="Book" Relationship="Self.FK__Participa__IdBoo__59063A47" FromRole="Participate" ToRole="Book" />
+        </EntityType>
+        <EntityType Name="Publisher">
+          <Key>
+            <PropertyRef Name="IdPub" />
+          </Key>
+          <Property Name="IdPub" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="phone" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Books" Relationship="Self.FK__Book__IdPub__5535A963" FromRole="Publisher" ToRole="Book" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="IdUser" />
+          </Key>
+          <Property Name="IdUser" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="username" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="password" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="confirmPassword" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="role" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="phone" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="Orders" Relationship="Self.FK__Orders__MaKH__4F7CD00D" FromRole="Users" ToRole="Orders" />
+        </EntityType>
+        <Association Name="FK__Participat__IdAu__5812160E">
+          <End Role="Author" Type="Self.Author" Multiplicity="1" />
+          <End Role="Participate" Type="Self.Participate" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Author">
+              <PropertyRef Name="IdAu" />
+            </Principal>
+            <Dependent Role="Participate">
+              <PropertyRef Name="IdAu" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Book__IdCate__5441852A">
+          <End Role="Category" Type="Self.Category" Multiplicity="0..1" />
+          <End Role="Book" Type="Self.Book" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="IdCate" />
+            </Principal>
+            <Dependent Role="Book">
+              <PropertyRef Name="IdCate" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Book__IdPub__5535A963">
+          <End Role="Publisher" Type="Self.Publisher" Multiplicity="0..1" />
+          <End Role="Book" Type="Self.Book" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Publisher">
+              <PropertyRef Name="IdPub" />
+            </Principal>
+            <Dependent Role="Book">
+              <PropertyRef Name="IdPub" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__OrderDeta__IdBoo__5BE2A6F2">
+          <End Role="Book" Type="Self.Book" Multiplicity="1" />
+          <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Book">
+              <PropertyRef Name="IdBook" />
+            </Principal>
+            <Dependent Role="OrderDetail">
+              <PropertyRef Name="IdBook" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Participa__IdBoo__59063A47">
+          <End Role="Book" Type="Self.Book" Multiplicity="1" />
+          <End Role="Participate" Type="Self.Participate" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Book">
+              <PropertyRef Name="IdBook" />
+            </Principal>
+            <Dependent Role="Participate">
+              <PropertyRef Name="IdBook" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__OrderDeta__IdOrd__5CD6CB2B">
+          <End Role="Orders" Type="Self.Order" Multiplicity="1" />
+          <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Orders">
+              <PropertyRef Name="IdOrder" />
+            </Principal>
+            <Dependent Role="OrderDetail">
+              <PropertyRef Name="IdOrder" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Orders__MaKH__4F7CD00D">
+          <End Role="Users" Type="Self.User" Multiplicity="0..1" />
+          <End Role="Orders" Type="Self.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="IdUser" />
+            </Principal>
+            <Dependent Role="Orders">
+              <PropertyRef Name="MaKH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Book_StoreEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Authors" EntityType="Self.Author" />
+          <EntitySet Name="Books" EntityType="Self.Book" />
+          <EntitySet Name="Categories" EntityType="Self.Category" />
+          <EntitySet Name="OrderDetails" EntityType="Self.OrderDetail" />
+          <EntitySet Name="Orders" EntityType="Self.Order" />
+          <EntitySet Name="Participates" EntityType="Self.Participate" />
+          <EntitySet Name="Publishers" EntityType="Self.Publisher" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <AssociationSet Name="FK__Participat__IdAu__5812160E" Association="Self.FK__Participat__IdAu__5812160E">
+            <End Role="Author" EntitySet="Authors" />
+            <End Role="Participate" EntitySet="Participates" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Book__IdCate__5441852A" Association="Self.FK__Book__IdCate__5441852A">
+            <End Role="Category" EntitySet="Categories" />
+            <End Role="Book" EntitySet="Books" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Book__IdPub__5535A963" Association="Self.FK__Book__IdPub__5535A963">
+            <End Role="Publisher" EntitySet="Publishers" />
+            <End Role="Book" EntitySet="Books" />
+          </AssociationSet>
+          <AssociationSet Name="FK__OrderDeta__IdBoo__5BE2A6F2" Association="Self.FK__OrderDeta__IdBoo__5BE2A6F2">
+            <End Role="Book" EntitySet="Books" />
+            <End Role="OrderDetail" EntitySet="OrderDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Participa__IdBoo__59063A47" Association="Self.FK__Participa__IdBoo__59063A47">
+            <End Role="Book" EntitySet="Books" />
+            <End Role="Participate" EntitySet="Participates" />
+          </AssociationSet>
+          <AssociationSet Name="FK__OrderDeta__IdOrd__5CD6CB2B" Association="Self.FK__OrderDeta__IdOrd__5CD6CB2B">
+            <End Role="Orders" EntitySet="Orders" />
+            <End Role="OrderDetail" EntitySet="OrderDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Orders__MaKH__4F7CD00D" Association="Self.FK__Orders__MaKH__4F7CD00D">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Orders" EntitySet="Orders" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Book_StoreModelStoreContainer" CdmEntityContainer="Book_StoreEntities">
+          <EntitySetMapping Name="Authors">
+            <EntityTypeMapping TypeName="Book_StoreModel.Author">
+              <MappingFragment StoreEntitySet="Author">
+                <ScalarProperty Name="IdAu" ColumnName="IdAu" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="story" ColumnName="story" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Books">
+            <EntityTypeMapping TypeName="Book_StoreModel.Book">
+              <MappingFragment StoreEntitySet="Book">
+                <ScalarProperty Name="IdBook" ColumnName="IdBook" />
+                <ScalarProperty Name="nameBook" ColumnName="nameBook" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="image" ColumnName="image" />
+                <ScalarProperty Name="quality" ColumnName="quality" />
+                <ScalarProperty Name="IdCate" ColumnName="IdCate" />
+                <ScalarProperty Name="IdPub" ColumnName="IdPub" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Categories">
+            <EntityTypeMapping TypeName="Book_StoreModel.Category">
+              <MappingFragment StoreEntitySet="Category">
+                <ScalarProperty Name="IdCate" ColumnName="IdCate" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OrderDetails">
+            <EntityTypeMapping TypeName="Book_StoreModel.OrderDetail">
+              <MappingFragment StoreEntitySet="OrderDetail">
+                <ScalarProperty Name="IdBook" ColumnName="IdBook" />
+                <ScalarProperty Name="IdOrder" ColumnName="IdOrder" />
+                <ScalarProperty Name="quanlity" ColumnName="quanlity" />
+                <ScalarProperty Name="price" ColumnName="price" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Orders">
+            <EntityTypeMapping TypeName="Book_StoreModel.Order">
+              <MappingFragment StoreEntitySet="Orders">
+                <ScalarProperty Name="IdOrder" ColumnName="IdOrder" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="oderDate" ColumnName="oderDate" />
+                <ScalarProperty Name="deliveryDate" ColumnName="deliveryDate" />
+                <ScalarProperty Name="MaKH" ColumnName="MaKH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Participates">
+            <EntityTypeMapping TypeName="Book_StoreModel.Participate">
+              <MappingFragment StoreEntitySet="Participate">
+                <ScalarProperty Name="IdAu" ColumnName="IdAu" />
+                <ScalarProperty Name="IdBook" ColumnName="IdBook" />
+                <ScalarProperty Name="role" ColumnName="role" />
+                <ScalarProperty Name="location" ColumnName="location" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Publishers">
+            <EntityTypeMapping TypeName="Book_StoreModel.Publisher">
+              <MappingFragment StoreEntitySet="Publisher">
+                <ScalarProperty Name="IdPub" ColumnName="IdPub" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="address" ColumnName="address" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="Book_StoreModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="confirmPassword" ColumnName="confirmPassword" />
+                <ScalarProperty Name="role" ColumnName="role" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

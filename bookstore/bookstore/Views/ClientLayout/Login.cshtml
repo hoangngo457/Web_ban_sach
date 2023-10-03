@@ -1,0 +1,45 @@
+﻿@model bookstore.Models.User
+
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="~/Content/CSS/bootstrap.min.css"
+          rel="stylesheet" />
+    <script src="~/Content/JavaScript/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="~/Content/CSS/login.css" />
+    <title>Đăng nhập</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken();
+        <div class="container-fluid mt-4 mb-5 form-dn border">
+            <h2>Đăng nhập tài khoản</h2>
+
+            <div class="mb-3 mt-3">
+                <label for="username">Tên tài khoản:</label>
+                @Html.TextBoxFor(m => m.username, "", new { @class = "form-control rounded", @placeholder = "..." })
+
+            </div>
+            <div class="mb-3">
+                <label for="pwd">Mật khẩu:</label>
+                @Html.PasswordFor(m => m.password, new { @class = "form-control rounded", @placeholder = "..." })
+            </div>
+
+            <p class="error">@ViewBag.LoginFailed</p>
+
+            <button type="submit" class="btn btn-primary button-login">Đăng nhập</button>
+
+        </div>
+    }
+</body>
+</html>
+

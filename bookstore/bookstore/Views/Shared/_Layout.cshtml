@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="~/Content/CSS/bootstrap.min.css"
+          rel="stylesheet" />
+    <script src="~/Content/JavaScript/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="~/Content/CSS/layout.css" />
+</head>
+<body>
+    @{ var user = Session["User"] as bookstore.Models.User;}
+
+    <div class="container-fluid w-100 top-nav">
+        <div class="form-login">
+                @if (user != null)
+                {
+                    <ul class="form-a">
+                        <li>Xin chào, <a href=""> @user.name  </a></li>
+                        <li><a href="~/ClientLayout/Logout">Đăng xuất</a></li>
+                    </ul>
+                }
+                else
+                {
+                    <ul>
+                        <li>@Html.ActionLink("Đăng kí", "Register", "ClientLayout")</li>
+                        <li>@Html.ActionLink("Đăng nhập", "Login", "ClientLayout")</li>
+                    </ul>
+
+                }
+        </div>
+    </div>
+    <div class="header">
+        <div class="col-4 logo">
+            <a href="~/ClientLayout/Home">
+                <img src="~/Content/Images/logo.jpg" alt="" height="100" width="100" class="img" />
+            </a>
+        </div>
+
+        <div class="col-4 search border">
+            <input type="search" id="search" placeholder="Tìm kiếm tại đây..." />
+            <button class="button" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+
+        <div class="cart">
+            <a href="">
+                <img src="" alt="" />
+                0sp-0đ
+            </a>
+        </div>
+    </div>
+    <div class="container-fluid w-100 nav">
+        <ul>
+            <li><a href="~/ClientLayout/Home">trang chủ</a></li>
+            <li><a href="">sản phẩm</a></li>
+            <li><a href="">giới thiệu</a></li>
+            <li><a href="">liên hệ</a></li>
+        </ul>
+    </div>
+    @RenderBody();
+</body>
+</html>

@@ -1,0 +1,66 @@
+﻿@model bookstore.Models.User
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="~/Content/CSS/bootstrap.min.css"
+          rel="stylesheet" />
+    <script src="~/Content/JavaScript/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="~/Content/CSS/login.css" />
+    <title>Đăng kí tài khoản</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="container-fluid mt-4 mb-5 form-dk border">
+            <h2>Đăng kí tài khoản</h2>
+            <div class="mb-3 mt-3">
+                <label for="name">Họ Tên:</label>
+                @Html.EditorFor(m => m.name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(m => m.name, "", new { @class = "text-danger" })
+            </div>
+            <div class="mb-3 mt-3">
+                <label for="username">Tên tài khoản:</label>
+                @Html.EditorFor(m => m.username, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(m => m.username, "", new { @class = "text-danger" })
+                @if(ViewBag.error != null)
+                {
+                    <span class="error">@ViewBag.error</span>
+                }
+            </div>
+            <div class="mb-3">
+                <label for="pwd">Mật khẩu:</label>
+                @Html.PasswordFor(m => m.password, new { @class = "form-control rounded", @placeholder = "..." })
+                @Html.ValidationMessageFor(m => m.password, "", new { @class = "text-danger" })
+            </div>
+            <div class="mb-3 mt-3">
+                <label for="repwd">Nhập lại mật khẩu:</label>
+                @Html.PasswordFor(m => m.confirmPassword, new { @class = "form-control rounded", @placeholder = "..." })
+                @Html.ValidationMessageFor(m => m.confirmPassword, "", new { @class = "text-danger" })
+            </div>
+            <div class="mb-3 mt-3">
+                <label for="phone">Số điện thoại:</label>
+                @Html.EditorFor(m => m.phone, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(m => m.phone, "", new { @class = "text-danger" })
+
+            </div>
+            <div class="form-check mb-3">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" name="remember" />
+                    Đồng ý với chính sách và điều khoản
+                </label>
+            </div>
+            <input type="submit" class="btn btn-primary button-login" value="Đăng kí" />
+        </div>
+
+    }
+
+</body>
+</html>

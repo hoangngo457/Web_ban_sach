@@ -1,0 +1,50 @@
+﻿@model bookstore.Models.Participate
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Participate</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.role)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.role)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.location)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Author.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Author.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Book.nameBook)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Book.nameBook)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

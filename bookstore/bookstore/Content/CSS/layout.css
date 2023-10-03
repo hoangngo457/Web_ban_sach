@@ -1,0 +1,156 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.top-nav {
+    background-color: #fff;
+    position: relative;
+    height: 38px;
+    border-bottom: 1px solid #c0c0c0;
+    text-decoration: none;
+    color: #000;
+}
+
+.form-login {
+    float: right;
+    margin-right: 70px;
+    margin-top: 4px;
+}
+
+    .form-login ul li {
+        display: inline;
+    }
+
+        .form-login ul li a {
+            text-decoration: none;
+            color: #000;
+        }
+
+            .form-login ul li a:hover {
+                border: none;
+                text-decoration: none;
+                color: #ff6666;
+                font-weight: bold;
+            }
+
+.form-a li a{
+            background-color: #fff;
+            text-decoration: none;
+            color: #000;
+        }
+
+    .form-a li a:hover {
+        border: none;
+        text-decoration: none;
+        color: #ff6666;
+        font-weight: bold;
+    }
+
+
+.btn-gr {
+    margin-right: 100px;
+}
+
+.header {
+    position: relative;
+    display: flexbox;
+}
+
+.logo {
+    float: left;
+    margin-top: -20px;
+}
+
+    .logo a {
+        margin-left: 150px;
+    }
+
+.search {
+    overflow: hidden;
+    width: 550px;
+    white-space: nowrap;
+    margin-left: 40px;
+    margin-top: 40px;
+    border-radius: 5px;
+}
+
+    .search input#search {
+        width: 550px;
+        height: 50px;
+        background: #fff;
+        border: none;
+        font-size: 10pt;
+        float: left;
+        color: #000;
+        padding-left: 15px;
+        border-radius: 5px;
+        border-radius: 5px;
+    }
+
+.button {
+    float: right;
+    width: 60px;
+    height: 48px;
+    padding: 10px;
+    background: #2196f3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+    margin-top: -49px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+    .button:hover {
+        background: #0b7dda;
+    }
+
+.cart {
+    position: relative;
+    float: right;
+    width: fit-content;
+    height: 40px;
+    right: 100px;
+    bottom: 42px;
+    background-color: #fff;
+    border: 1px solid #c0c0c0;
+}
+
+    .cart a {
+        text-decoration: none;
+        color: #000;
+    }
+
+        .cart a:hover {
+            background-color: #fff;
+        }
+
+.nav {
+    background-color: #999;
+    height: 45px;
+    padding-left: 30px;
+}
+
+    .nav ul li {
+        position: relative;
+        display: inline;
+        margin-left: 70px;
+        width: 100px;
+        height: 45px;
+        top: 10px;
+    }
+
+    .nav a {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 11px;
+        color: #fff;
+    }
+
+        .nav a:hover {
+            background-color: #ff6666;
+        }

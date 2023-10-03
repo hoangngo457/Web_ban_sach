@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="~/Content/CSS/bootstrap.min.css"
+          rel="stylesheet" />
+    <script src="~/Content/JavaScript/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="~/Content/CSS/admin_layout.css" />
+</head>
+<body>
+    <div>
+        <div class="container-fluid">
+            <div class="header">
+                <div class="main-title">
+                    <a href="" class="name-page">Admin</a>
+                </div>
+                <div class="site-action">
+                    <a href="~/ClientLayout/Logout">Đăng xuất</a>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="nav">
+                    <ul>
+                        <li><a href="">Sản phẩm</a></li>
+                        <li><a href="">Loại sách</a></li>
+                        <li><a href="">Nhà xuất bản</a></li>
+                        <li><a href="">Đơn hàng</a></li>
+                        <li><a href="">Khách hàng</a></li>
+                        <li><a href="">Tài khoản</a></li>
+                        <li><a href="">Thống kê bán hàng</a></li>
+                    </ul>
+                </div>
+                <div class="content">
+                    <div class="para">
+                        @RenderBody();
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
