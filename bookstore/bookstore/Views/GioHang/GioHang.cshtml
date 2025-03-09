@@ -1,0 +1,201 @@
+﻿@using bookstore.Models;
+@model List<GioHang>
+@{
+    ViewBag.Title = "GioHang";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="~/Content/CSS/bootstrap.min.css"
+          rel="stylesheet" />
+    <script src="~/Content/JavaScript/bootstrap.bundle.min.js"></script>
+
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        .container-fluid{
+            margin-top: 50px;
+            margin-bottom: 50px;
+            padding-left: 60px;
+        }
+       
+        .cart-area{
+            margin-left: 20px;
+        }
+        .image{
+            margin-left: 20px;
+            margin-top: 20px;
+            position:relative;
+            float:left;
+        }
+        .info{
+            position: relative;
+            margin-top: 35px;
+            margin-left:20px;
+            float: left;
+            font-size: 18px;
+        }
+        .info p .name{
+            overflow: hidden;
+        }
+        .price{
+            margin-left: 450px;
+            color: #f00;
+            font-size: 18px;
+        }
+        .sl{
+            margin-top: -45px;
+            margin-left: 30px;
+            font-size: 17px;
+        }
+        .pay{
+            background-color: #eee;
+            border-radius: 10px;
+            padding: 20px;
+            float:left;
+            width: 350px;
+        }
+        .text{
+            font-size: 20px;
+            text-transform: uppercase;
+            
+        }
+        .total {
+            color: #f00;
+            font-size: 18px;
+            margin-left: 200px;
+            margin-top: -20px;
+        }
+        .line{
+            border-bottom: 2px solid #ddd;
+        }
+        .order{
+            margin-top: 20px;
+            margin-left: 75px;
+        }
+        .btn-order{
+            background-color: #09f;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            padding: 6px 50px;
+        }
+            .btn-order:hover {
+                background-color: #00f;
+                box-shadow: 3px 3px 2px #c0c0c0;
+            }
+        
+    </style>
+    <title>Giỏ hàng</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="container-fluid row">
+        <h4>Giỏ hàng</h4>
+        <div class="cart-area col-sm-8">
+            @foreach (var item in Model)
+            {
+                <div class="image">
+                    <img src="@Url.Content("~/Content/Images/"+item.sAnhBia)" width="90" height="90" />
+                </div>
+                <div class="info">
+                    <p class="name">@item.sTenSach</p>
+                    
+                    <p class="price">@String.Format("{0:0,0}", item.dDonGia) VND</p>
+                    <p class="sl">Số lượng: <strong>@item.iSoLuong</strong>
+                        
+                    </p>
+                </div>
+            }
+
+
+
+                
+        </div>
+        <div class="col-sm-3">
+            <div class="pay">
+                @foreach (var item in Model)
+                {
+                    <div class="line">
+                        <p class="text">tổng cộng</p>
+                        <p class="total">@String.Format("{0:0,0}", item.ThanhTien) VND</p>
+                    </div>
+                }
+                <div class="order">
+                    @using (Html.BeginForm("DatHang", "GioHang"))
+                    {
+                        <input type="submit" value="Đặt hàng" class="btn-order"/>
+                    }
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+
+    @*<h2 style="text-align:center">Giỏ hàng của bạn</h2>
+    <table border="1" style="margin-left:200px;text-align:center">
+        <tr>
+            <th width="100"></th>
+
+            <th width="500">Tên sách</th>
+
+
+            <th width="150">Đơn giá</th>
+
+            <th width="100">Số lượng</th>
+
+            <th width="150">Thành tiền</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td><img src="@Url.Content("~/Content/Images/"+item.sAnhBia)" width="70" height="70" /></td>
+                <td>@item.sTenSach</td>
+
+
+
+                <td>
+                    @String.Format("{0:0,0}", item.dDonGia) VND
+                </td>
+
+                <td>@item.iSoLuong</td>
+
+                <td>@String.Format("{0:0,0}", item.ThanhTien) VND</td>
+
+
+            </tr>
+
+        }
+        <tr>
+            <td colspan="5" style="text-align:right">Tổng tiền: </td>
+            <td> @Html.Action("GioHangPartial1", "GioHang") VND</td>
+
+        </tr>
+
+        <tr>
+            <td colspan="6" style="text-align:right; color:blue ">
+                @Html.ActionLink("Chỉnh sửa giỏ hàng", "SuaGioHang")
+            </td>
+        </tr>
+        <tr>
+            <td colspan="6" style=" font-size:20px ">
+                @using (Html.BeginForm("DatHang", "GioHang"))
+                {
+                    <input type="submit" value="Đặt hàng" style="width:200px" />
+                }
+            </td>
+        </tr>
+    </table>*@
+
+</body>
+</html>

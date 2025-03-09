@@ -46,10 +46,14 @@ namespace bookstore.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "IdUser,username,password,role")] User user)
+        public ActionResult Create([Bind(Include = "IdUser,username,password,confirmPassword,role,name,address,email,phone")] User user)
         {
             if (ModelState.IsValid)
             {
+                if(user.role == null)
+                {
+                    user.role = "Khách hàng";
+                }
                 db.Users.Add(user);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -78,7 +82,7 @@ namespace bookstore.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "IdUser,username,password,role")] User user)
+        public ActionResult Edit([Bind(Include = "IdUser,username,password,confirmPassword,role,name,address,email,phone")] User user)
         {
             if (ModelState.IsValid)
             {

@@ -1,0 +1,223 @@
+﻿@model PagedList.PagedList<bookstore.Models.Book>
+@using PagedList.Mvc
+
+@{
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="~/Content/CSS/button.css" />
+    <title>Sản phẩm</title>
+    <style>
+        .content-area{
+            width:contain;
+        }
+
+        .search {
+            overflow: hidden;
+            width: 400px;
+            white-space: nowrap;
+            margin-right: 40px;
+            border-radius: 5px;
+            float: right;
+            display: block;
+        }
+
+            .search .input {
+                width: 400px;
+                height: 50px;
+                background: #fff;
+                border: none;
+                font-size: 10pt;
+                float: left;
+                color: #000;
+                padding-left: 15px;
+                border-radius: 5px;
+                border-radius: 5px;
+            }
+
+        .button {
+            float: right;
+            width: 60px;
+            height: 48px;
+            padding: 10px;
+            background: #2196f3;
+            color: white;
+            font-size: 17px;
+            border: 1px solid grey;
+            border-left: none;
+            cursor: pointer;
+            margin-top: -49px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+            .button:hover {
+                background: #0b7dda;
+            }
+
+        .pagination {
+            display: inline;
+        }
+
+            .pagination a {
+                color: black;
+                float: left;
+                padding: 8px 16px;
+                text-decoration: none;
+                transition: background-color .3s;
+            }
+
+                .pagination a.active {
+                    background-color: #0f0;
+                    color: white;
+                    border-radius: 5px;
+                }
+
+                .pagination a:hover:not(.active) {
+                    background-color: #ddd;
+                    border-radius: 5px;
+                }
+
+        .text {
+            float: right;
+            margin-right: 30px;
+        }
+        .notice{float: left;
+                margin-top: 10px;
+                margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-area container-fluid">
+        <a href="@Url.Action("Create", "Books", FormMethod.Post)" class="btn btn-primary btn-add mb-3">Thêm sách mới</a>
+        <div class="search border">
+            @using (Html.BeginForm("Result", "Search"))
+            {
+                <a>@Html.TextBox("tuKhoa", "", htmlAttributes: new { @class = "input", @placeholder = "Tìm kiếm sản phẩm tại đây..." })</a>
+                <button class="button" type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+            }
+
+        </div>
+
+        <div class="notice">
+            <h5>@ViewBag.Thongbao</h5>
+
+        </div>
+
+        <table class="table table-striped container-fluid">
+            <tr class="row container-fluid">
+                <th class="col-xl-2">
+                    Ảnh sản phẩm
+                </th>
+                <th class="col-xl-3">
+                    Tên sách
+                </th>
+                <th class="col-xl-2">
+                    Số lượng
+                </th>
+                <th class="col-xl-2">
+                    Giá tiền
+                </th>
+                <th class="col-xl-3"></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr id="row_@item.IdBook" class="row container-fluid">
+                    <td class="col-xl-2">
+                        <img src="~/Content/images/@item.image" width="40" height="60" />
+                    </td>
+                    <td class="col-xl-3">
+                        @Html.DisplayFor(modelItem => item.nameBook)
+                    </td>
+                    <td class="col-xl-2">
+                        @Html.DisplayFor(modelItem => item.quality)
+                    </td>
+                    <td class="col-xl-2">
+                        @Html.DisplayFor(modelItem => item.price)
+                    </td>
+                    <td class="col-xl-3">
+                        <a href="@Url.Action("Details","Books", new {id = item.IdBook})" class="btn btn-success">Chi tiết</a>
+                        <a class="btn btn-danger" onclick="ConfirmDelete(@item.IdBook)">Xóa <i class="glyphicon-trash"></i>  </a>
+
+                    </td>
+                </tr>
+
+            }
+
+        </table>
+
+
+
+
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h3 class="modal-title">Xóa</h3>
+                    </div>
+                    <div class="modal-body">
+                        <h4>Bạn có chắc muốn xóa sản phẩm này. </h4>
+
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" class="btn btn-success" onclick="DeleteBook()">Xác nhận</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <input type="hidden" id="hiddenbook" />
+    </div>
+
+    <div class="pagination">
+        <p class="text">Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)</p>
+        <a>@Html.PagedListPager(Model, page => Url.Action("Result", new { page = page, @tuKhoa=ViewBag.TuKhoa }))</a>
+    </div>
+
+    <script>
+
+        var ConfirmDelete = function (bookId) {
+
+            $("#hiddenbook").val(bookId);
+            $("#myModal").modal('show');
+
+        }
+
+        var DeleteBook = function () {
+
+            var bId = $("#hiddenbook").val();
+
+            $.ajax({
+
+                type: "POST",
+                url: "/Books/DeleteBook",
+                data: { bookId: bId },
+                success: function (result) {
+                    $("#myModal").modal('hide');
+                    $("#row_" + bId).remove();
+
+                }
+
+            })
+
+        }
+    </script>
+
+
+</body>
+</html>

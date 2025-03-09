@@ -1,0 +1,94 @@
+﻿* {
+    margin: 0px;
+    background-color: white;
+    vertical-align: middle;
+}
+
+.para h4 {
+    font-size: 35px;
+    margin-left: 200px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.create-content {
+    position: relative;
+    float: left;
+    text-align: center;
+    margin-left: 100px;
+}
+
+.loadImg {
+    float: left;
+    width: 200px;
+    margin: 10px;
+    margin-left: 30px;
+}
+
+.info {
+    position: relative;
+    float: left;
+    width: fit-content;
+    margin-left: 30px;
+}
+
+    .info table {
+        text-align: left;
+    }
+
+        .info table tr td {
+            padding: 7px;
+            padding-right: 20px;
+            text-align: left;
+        }
+
+    .info input {
+        font-size: 15px;
+        border: none;
+        border-bottom: 1px solid black;
+    }
+
+.btn_add {
+    margin-top: 30px;
+    font-size: 20px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #3399ff;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+    .btn_add:hover {
+        background-color: blue;
+        color: #fff;
+    }
+
+    .btn_add:active {
+        background-color: blue;
+        box-shadow: 0 2px #8b8b8b;
+        transform: translateY(2px);
+    }
+
+.btn_close {
+    margin-top: 30px;
+    font-size: 15px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #f00;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    margin-left:20px;
+}
+.btn_close:hover {
+    background-color: #d00;
+    color: #fff;
+}
+.btn_close:active {
+    background-color: #f00;
+    box-shadow: 0 2px #8b8b8b;
+    transform: translateY(2px);
+}

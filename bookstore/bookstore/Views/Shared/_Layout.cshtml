@@ -1,66 +1,151 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="~/Content/CSS/bootstrap.min.css"
-          rel="stylesheet" />
-    <script src="~/Content/JavaScript/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="~/Content/CSS/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Content/CSS/themify-icons.css" />
     <link rel="stylesheet" href="~/Content/CSS/layout.css" />
+
+
 </head>
 <body>
     @{ var user = Session["User"] as bookstore.Models.User;}
+    <!-- Header strat -->
+    <header class="header">
+        <div class="top-header">
+            <div class="container">
+                <div>
+                    <span>Phone: 0395 549 212</span>
+                </div>
+                <div class="form-login">
+                    @if (user != null)
+                    {
+                        <ul class="form-a">
+                            <li>Xin chào, <a href=""> @user.name  </a></li>
+                            <li><a href="~/ClientLayout/Logout">Đăng xuất</a></li>
+                        </ul>
+                    }
+                    else
+                    {
+                        <ul>
+                            <li>@Html.ActionLink("Đăng kí", "Register", "ClientLayout")</li>  |
+                            <li>@Html.ActionLink("Đăng nhập", "Login", "ClientLayout")</li>
+                        </ul>
 
-    <div class="container-fluid w-100 top-nav">
-        <div class="form-login">
-                @if (user != null)
-                {
-                    <ul class="form-a">
-                        <li>Xin chào, <a href=""> @user.name  </a></li>
-                        <li><a href="~/ClientLayout/Logout">Đăng xuất</a></li>
-                    </ul>
-                }
-                else
-                {
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="container line">
+            <nav class="navbar">
+                <!-- Site logo -->
+                <a href="~/ClientLayout/Home" class="logo">
+                    <img src="~/Content/Images/logo.jpg" alt="logo" />
+                </a>
+                <div class="navbar-nav">
                     <ul>
-                        <li>@Html.ActionLink("Đăng kí", "Register", "ClientLayout")</li>
-                        <li>@Html.ActionLink("Đăng nhập", "Login", "ClientLayout")</li>
+                        <li><a class="@(Request.Path.Contains("Home") ? "actived" : "")" href="~/ClientLayout/Home">Trang chủ</a></li>
+                        <li><a class="@(Request.Path.Contains("Shop") ? "actived" : "")" href="~/ClientLayout/Shop">Sản phẩm</a></li>
+                        <li><a class="@(Request.Path.Contains("About") ? "actived" : "")" href="~/ClientLayout/About">Giới thiệu</a></li>
+                        <li><a class="@(Request.Path.Contains("Contact") ? "actived" : "")" href="~/ClientLayout/Contact">Liên hệ</a></li>
+
                     </ul>
+                </div>
 
-                }
+                <div class="d-inline-flex align-items-center" style="margin-right:30px">
+                    <div class="search-icon icon">
+                        <div id="search-box">
+                            @using (Html.BeginForm("SearchResult", "Search"))
+                            {
+                                <a>@Html.TextBox("tuKhoa", "", htmlAttributes: new { @id = "search-text", @placeholder = "Tìm kiếm tại đây...", @required = "true" })</a>
+                                @*<input type="text" id="search-text" placeholder="Tìm kiếm tại đây..." required />*@
+                                <button type="submit" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            }
+                        </div>
+
+                    </div>
+                    <a href="~/GioHang/GioHang" >
+                        @Html.Action("GioHangPartial", "GioHang")
+                    </a>
+                    <!-- Đăng nhập thành công hiện cái này -->
+                    <!-- <a href="#" class="wishlist icon">
+                      <i class=""></i>
+                      <span class="itemCount"></span>
+                    </a> -->
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- Header end -->
+
+    @RenderBody()
+
+    <!-- Footer strat -->
+<footer class="footer">
+    <div class="container foo-top">
+        <div class="row">
+            <div class="col-md-2 col-sm-6">
+                <div class="widget widget-navigation">
+                    <h4 class="widget-title">THÔNG TIN VỀ CỬA HÀNG</h4>
+                    <ul>
+                        <li><b>Tên cửa hàng</b></li>
+                        <li>Tiệm sách BookStore</li>
+                        <li><b>Địa chỉ</b></li>
+                        <li>Nguyễn Văn Lượng, Gò Vấp, TP.Hồ Chí Minh</li>
+                        <li><b>Email</b></li>
+                        <li>hoangngo457@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2 offset-md-1 col-sm-6">
+                <div class="widget widget-navigation">
+                    <h4 class="widget-title">VỀ CHÚNG TÔI</h4>
+                    <ul>
+                        <li><a href="~/ClientLayout/Home">Trang chủ</a></li>
+                        <li><a href="~/ClientLayout/Shop">Sản phẩm</a></li>
+                        <li><a href="~/ClientLayout/About">Giới thiệu</a></li>
+                        <li><a href="~/ClientLayout/Contact">Liên hệ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2 offset-md-1 col-sm-6">
+                <div class="widget widget-navigation">
+                    <h4 class="widget-title">CHÍNH SÁCH </h4>
+                    <ul>
+                        <li><a href="#">Chính sách mua hàng</a></li>
+                        <li><a href="#">Chính sách đổi trả</a></li>
+                        <li><a href="#">Chăm sóc khách hàng</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3 offset-md-1 col-sm-6">
+                <div class="widget widget-social">
+                    <h4 class="widget-title">THÔNG TIN LIÊN HỆ</h4>
+                    <div class="social-media">
+                        <a href="#"><img src="~/Content/Icon/facebook.png" alt="Facebook"/></a>
+                        <a href="#"><img src="~/Content/Icon/twitter.png" alt="Twitter" /></a>
+                        <a href="#"><img src="~/Content/Icon/pinterest.png" alt="Pinterest" /></a>
+                        <a href="#"><img src="~/Content/Icon/instagram.png" alt="Instagram" /></a>
+                    </div>
+                </div>
+                <div class="widget widget-payment">
+                    <h4 class="widget-title">PHƯƠNG THỨC THANH TOÁN</h4>
+                    <div class="payment">
+                        <img src="~/Content/Icon/visa.png" alt="Visa" width="78" height="50"/>
+                        <img src="~/Content/Icon/momo.png" alt="Momo" />
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
-    <div class="header">
-        <div class="col-4 logo">
-            <a href="~/ClientLayout/Home">
-                <img src="~/Content/Images/logo.jpg" alt="" height="100" width="100" class="img" />
-            </a>
-        </div>
-
-        <div class="col-4 search border">
-            <input type="search" id="search" placeholder="Tìm kiếm tại đây..." />
-            <button class="button" type="submit">
-                <i class="fa fa-search"></i>
-            </button>
-        </div>
-
-        <div class="cart">
-            <a href="">
-                <img src="" alt="" />
-                0sp-0đ
-            </a>
-        </div>
+    <div class="copyright">
+        <p>© Ngô Xuân Hoàng(hoangngo457)</p>
     </div>
-    <div class="container-fluid w-100 nav">
-        <ul>
-            <li><a href="~/ClientLayout/Home">trang chủ</a></li>
-            <li><a href="">sản phẩm</a></li>
-            <li><a href="">giới thiệu</a></li>
-            <li><a href="">liên hệ</a></li>
-        </ul>
-    </div>
-    @RenderBody();
+</footer>
+    <!-- Footer end -->
 </body>
 </html>

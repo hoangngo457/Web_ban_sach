@@ -48,33 +48,49 @@ boby {
     display: flex;
     top: 70px;
 }
-
-.nav ul li {
-    position: relative;
-    left: -44px;
-    list-style-type: none;
+.hoz-navgi {
+    position: fixed;
+    z-index: 1;
+    margin-top: 5px;
+/*    height: 100%;
+    background-color: #eee;*/
+    margin-left: -15px;
 }
 
-    .nav ul li a {
-        color: #fff;
-        float: left;
-        width: 250px;
-        text-decoration: none;
-        font-size: 20px;
-        background-color: #444;
-        padding: 20px 15px;
+    .hoz-navgi ul li {
+        position: relative;
+        list-style-type: none;
+        z-index: 1;
     }
 
-    .nav ul li:hover a {
-        background-color: #a9a9a9;
-    }
+   
 
-.content {
-    position: relative;
+        .hoz-navgi ul li a {
+            color: #fff;
+            float: left;
+            width: 250px;
+            text-decoration: none;
+            font-size: 20px;
+            background-color: #444;
+            padding: 20px 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hoz-navgi ul li:hover a {
+            background-color: #a9a9a9;
+        }
+
+.right-side {
+    position: absolute;
+    width: fit-content;
+    top: 50px;
     float: left;
+    margin-left: 300px;
 }
 
 .para {
     position: relative;
     top: -30px;
+    width: 100%;
 }

@@ -1,46 +1,129 @@
 ﻿@model IEnumerable<bookstore.Models.User>
 
 @{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
 
-<h2>Index</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Content/CSS/button.css" />
+    <title>Sản phẩm</title>
+</head>
+<body>
+    <div>
+        <a href="@Url.Action("Create", "Users")" class="btn btn-primary btn-add mb-3">Thêm người dùng</a>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.username)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.password)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.role)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.username)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.password)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.role)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IdUser }) |
-            @Html.ActionLink("Details", "Details", new { id=item.IdUser }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IdUser })
-        </td>
-    </tr>
-}
+        <table class="table table-striped container-fluid">
+            <tr class="row container-fluid" style="width: 950px;">
+                <th class="col-xl-2">
+                    Họ tên
+                </th>
+                <th class="col-xl-2">
+                    Vài trò
+                </th>
+                <th class="col-xl-2">
+                    Địa chỉ
+                </th>
+                <th class="col-xl-2">
+                    Số điện thoại
+                </th>
+                <th class="col-xl-2">
+                    Email
+                </th>
+                <th class="col-xl-2"></th>
+            </tr>
 
-</table>
+            @foreach (var item in Model)
+            {
+                
+                <tr id="row_@item.IdUser" class="row container-fluid" style="width: 950px;">
+                    <td class="col-xl-2">
+                        @Html.DisplayFor(modelItem => item.name)
+                    </td>
+                    <td class="col-xl-2">
+                        @Html.DisplayFor(modelItem => item.role)
+                    </td>
+                    <td class="col-xl-2">
+                        @Html.DisplayFor(modelItem => item.address)
+                    </td>
+                    <td class="col-xl-2">
+                        @Html.DisplayFor(modelItem => item.phone)
+                    </td>
+                    <td class="col-xl-2">
+                        @Html.DisplayFor(modelItem => item.email)
+                    </td>
+                    <td class="col-xl-2">
+                        <a href="@Url.Action("Details","Users", new {id = item.IdUser})" class="btn btn-success">Chi tiết</a>
+                        <a class="btn btn-danger" onclick="ConfirmDelete(@item.IdUser)">Xóa <i class="glyphicon-trash"></i>  </a>
+
+                    </td>
+                </tr>
+              
+
+             }
+
+
+        </table>
+
+            <div class="modal fade" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <h3 class="modal-title">Xóa</h3>
+                        </div>
+                        <div class="modal-body">
+                            <h4>Bạn có chắc muốn xóa người dùng này. </h4>
+
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#" class="btn btn-default" data-dismiss="modal">Thoát</a>
+                            <a href="#" class="btn btn-success" onclick="DeleteBook()">Xác nhận</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <input type="hidden" id="hiddenbook" />
+            </div>
+
+
+            <script>
+
+                var ConfirmDelete = function (bookId) {
+
+                    $("#hiddenbook").val(bookId);
+                    $("#myModal").modal('show');
+
+                }
+
+                var DeleteBook = function () {
+
+                    var bId = $("#hiddenbook").val();
+
+                    $.ajax({
+
+                        type: "POST",
+                        url: "/Users/DeleteUser",
+                        data: { bookId: bId },
+                        success: function (result) {
+                            $("#myModal").modal('hide');
+                            $("#row_" + bId).remove();
+
+                        }
+
+                    })
+
+                }
+            </script>
+
+    
+        </body>
+</html>

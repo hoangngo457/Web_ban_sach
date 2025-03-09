@@ -1,75 +1,78 @@
 ﻿@model bookstore.Models.Book
 
 @{
-    ViewBag.Title = "Details";
     Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
 
-<h2>Details</h2>
 
-<div>
-    <h4>Book</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.nameBook)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.nameBook)
-        </dd>
+<html>
+<head>
+    <title>Chi tiết sản phẩm</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="~/Content/CSS/bootstrap.min.css"
+          rel="stylesheet" />
+    <script src="~/Content/JavaScript/bootstrap.bundle.min.js"></script>
+    <script src="~/Content/JavaScript/kit.fontawesome..js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="~/Content/CSS/create.css" />
+</head>
+<body>
+        <h4>Chi tiết sản phẩm</h4>
+        <div class="form-horizontal">
+            <div class="loadImg">
+                <img src="@Url.Content("~/Content/Images/"+Model.image)" width="200" height="200" style="object-fit: contain" />
+            </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.description)
-        </dt>
+            <div class="info">
+                <table class="table">
+                    <tr>
+                        <td>Tên sách: </td>
+                        <td style="width:500px">
+                            @Html.DisplayFor(model => model.nameBook)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mô tả sách: </td>
+                        <td style="width:500px">
+                            @Html.DisplayFor(model => model.description)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Số lượng: </td>
+                        <td style="width:500px">
+                            @Html.DisplayFor(model => model.quality)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Đơn giá: </td>
+                        <td style="width:500px">
+                            @Html.DisplayFor(model => model.price)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Thể loại sách: </td>
+                        <td style="width:300px">
+                            @Html.DisplayFor(model => model.Category.name)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Nhà xuất bản: </td>
+                        <td style="width:300px">
+                            @Html.DisplayFor(model => model.Publisher.name)
+                        </td>
+                    </tr>
+                </table>
+                <div>
+                    <a href="@Url.Action("Edit", "Books", new { id = Model.IdBook })" class="btn btn-primary"> Sửa</a>
+                    <a href="@Url.Action("Index", "Books", "Books")" class="btn btn-secondary"> Trở về</a>
+                </div>
+            </div>
+        </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.description)
-        </dd>
+</body>
+</html>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.price)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.price)
-        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.image)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.image)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.quality)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.quality)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Category.name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Category.name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Publisher.name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Publisher.name)
-        </dd>
-
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.IdBook }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

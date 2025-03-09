@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Đặt hàng thành công";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .image {
+        height: 200px;
+        width: 200px;
+        margin-left: 530px;
+        margin-top: 100px;
+    }
+    .text{
+        margin-top: 40px;
+        margin-bottom: 100px;
+    }
+</style>
+<img class="image" src="~/Content/Images/dau_tich_xanh.png" />
+<div class="text">
+    <h3 style="text-align:center">Đặt hàng thành công</h3>
+    <h4 style="text-align:center">Chúng tôi sẽ liên hệ quý khách xác nhận trong thời gian sớm nhất</h4>
+    <h5 style="text-align:center"> <a href="@Url.Action("Home","ClientLayout")">Về trang chủ</a></h5>
+</div>
+
+
+

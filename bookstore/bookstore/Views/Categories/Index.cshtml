@@ -1,33 +1,102 @@
 ﻿@model IEnumerable<bookstore.Models.Category>
 
 @{
-    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
 
-<h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.name)
-        </th>
-        <th></th>
-    </tr>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Content/CSS/button.css" />
+    <title>Loại sản phẩm</title>
+</head>
+<body>
+    <div>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.name)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IdCate }) |
-            @Html.ActionLink("Details", "Details", new { id=item.IdCate }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IdCate })
-        </td>
-    </tr>
-}
+        <a href="@Url.Action("Create", "Categories")" class="btn btn-primary btn-add mb-3">Thêm loại sách mới</a>
 
-</table>
+        <table class="table">
+            <tr>
+                <th>
+                   Loại sách
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr id="row_@item.IdCate">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.name)
+                    </td>
+                    <td>
+                        <a href="@Url.Action("Edit", "Categories", new { id = item.IdCate })" class="btn btn-success"> Sửa</a>
+                        <a class="btn btn-danger" onclick="ConfirmDelete(@item.IdCate)">Xóa <i class="glyphicon-trash"></i>  </a>
+
+                    </td>
+                </tr>
+            }
+
+        </table>
+
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h3 class="modal-title">Xóa</h3>
+                    </div>
+                    <div class="modal-body">
+                        <h4>Bạn có chắc muốn xóa loại sản phẩm này. </h4>
+
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" class="btn btn-default" data-dismiss="modal">Thoát</a>
+                        <a href="#" class="btn btn-success" onclick="DeleteBook()">Xác nhận</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <input type="hidden" id="hiddenbook" />
+    </div>
+
+
+    <script>
+
+        var ConfirmDelete = function (cateId) {
+
+            $("#hiddenbook").val(cateId);
+            $("#myModal").modal('show');
+
+        }
+
+        var DeleteBook = function () {
+
+            var bId = $("#hiddenbook").val();
+
+            $.ajax({
+
+                type: "POST",
+                url: "/Categories/DeleteCate",
+                data: { cateId: bId },
+                success: function (result) {
+                    $("#myModal").modal('hide');
+                    $("#row_" + bId).remove();
+
+                }
+
+            })
+
+        }
+    </script>
+
+
+</body>
+</html>

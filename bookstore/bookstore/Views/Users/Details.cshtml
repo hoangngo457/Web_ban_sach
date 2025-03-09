@@ -1,42 +1,71 @@
 ﻿@model bookstore.Models.User
 
 @{
-    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
 
-<h2>Details</h2>
 
-<div>
-    <h4>User</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.username)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.username)
-        </dd>
+<html>
+<head>
+    <title>Chi tiết sản phẩm</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="~/Content/CSS/bootstrap.min.css"
+          rel="stylesheet" />
+    <script src="~/Content/JavaScript/bootstrap.bundle.min.js"></script>
+    <script src="~/Content/JavaScript/kit.fontawesome..js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="~/Content/CSS/create.css" />
+</head>
+<body>
+    <h4>Chi tiết người dùng</h4>
+   
 
-        <dt>
-            @Html.DisplayNameFor(model => model.password)
-        </dt>
+        <div class="info">
+            <table class="table">
+                <tr>
+                    <td>Họ tên: </td>
+                    <td style="width:500px">
+                        @Html.DisplayFor(model => model.name)
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tài khoản: </td>
+                    <td style="width:500px">
+                        @Html.DisplayFor(model => model.username)
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mật khẩu: </td>
+                    <td style="width:500px">
+                        @Html.DisplayFor(model => model.password)
+                    </td>
+                </tr>
+                <tr>
+                    <td>Vị trí: </td>
+                    <td style="width:500px">
+                        @Html.DisplayFor(model => model.role)
+                    </td>
+                </tr>
+                <tr>
+                    <td>Số điện thoại: </td>
+                    <td style="width:300px">
+                        @Html.DisplayFor(model => model.phone)
+                    </td>
+                </tr>
+                <tr>
+                    <td>Email: </td>
+                    <td style="width:300px">
+                        @Html.DisplayFor(model => model.email)
+                    </td>
+                </tr>
+            </table>
+            <div>
+                <a href="@Url.Action("Edit", "Users", new { id = Model.IdUser })" class="btn btn-primary"> Sửa</a>
+                <a href="@Url.Action("Index", "Users", "Users")" class="btn btn-secondary"> Trở về</a>
+            </div>
+        </div>
+    
 
-        <dd>
-            @Html.DisplayFor(model => model.password)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.role)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.role)
-        </dd>
-
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.IdUser }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+</body>
+</html>

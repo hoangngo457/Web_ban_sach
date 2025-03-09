@@ -89,30 +89,46 @@ namespace bookstore.Controllers
             return View(publisher);
         }
 
-        // GET: Publishers/Delete/5
-        public ActionResult Delete(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Publisher publisher = db.Publishers.Find(id);
-            if (publisher == null)
-            {
-                return HttpNotFound();
-            }
-            return View(publisher);
-        }
+        //// GET: Publishers/Delete/5
+        //public ActionResult Delete(int? id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+        //    }
+        //    Publisher publisher = db.Publishers.Find(id);
+        //    if (publisher == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+        //    return View(publisher);
+        //}
 
-        // POST: Publishers/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
+        //// POST: Publishers/Delete/5
+        //[HttpPost, ActionName("Delete")]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult DeleteConfirmed(int id)
+        //{
+        //    Publisher publisher = db.Publishers.Find(id);
+        //    db.Publishers.Remove(publisher);
+        //    db.SaveChanges();
+        //    return RedirectToAction("Index");
+        //}
+
+        public JsonResult DeletePublisher(int pubId)
         {
-            Publisher publisher = db.Publishers.Find(id);
-            db.Publishers.Remove(publisher);
-            db.SaveChanges();
-            return RedirectToAction("Index");
+            bool result = false;
+            Publisher p = db.Publishers.Where(x => x.IdPub == pubId).SingleOrDefault();
+            if (p != null)
+            {
+                db.Publishers.Remove(p);
+                db.SaveChanges();
+                result = true;
+            }
+
+
+
+            return Json(result, JsonRequestBehavior.AllowGet);
         }
 
         protected override void Dispose(bool disposing)

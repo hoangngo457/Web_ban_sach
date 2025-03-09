@@ -1,0 +1,124 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Code_C#\\Web_C#\\BookStoreWebsite\\bookstore\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C245725A-96BE-4073-9C26-9EC8BE7E69AF}|bookstore\\bookstore.csproj|D:\\Code_C#\\Web_C#\\BookStoreWebsite\\bookstore\\bookstore\\views\\clientlayout\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C245725A-96BE-4073-9C26-9EC8BE7E69AF}|bookstore\\bookstore.csproj|solutionrelative:bookstore\\views\\clientlayout\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C245725A-96BE-4073-9C26-9EC8BE7E69AF}|bookstore\\bookstore.csproj|d:\\code_c#\\web_c#\\bookstorewebsite\\bookstore\\bookstore\\content\\css\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{C245725A-96BE-4073-9C26-9EC8BE7E69AF}|bookstore\\bookstore.csproj|solutionrelative:bookstore\\content\\css\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C245725A-96BE-4073-9C26-9EC8BE7E69AF}|bookstore\\bookstore.csproj|d:\\code_c#\\web_c#\\bookstorewebsite\\bookstore\\bookstore\\content\\css\\layout.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{C245725A-96BE-4073-9C26-9EC8BE7E69AF}|bookstore\\bookstore.csproj|solutionrelative:bookstore\\content\\css\\layout.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C245725A-96BE-4073-9C26-9EC8BE7E69AF}|bookstore\\bookstore.csproj|d:\\code_c#\\web_c#\\bookstorewebsite\\bookstore\\bookstore\\views\\clientlayout\\shop.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C245725A-96BE-4073-9C26-9EC8BE7E69AF}|bookstore\\bookstore.csproj|solutionrelative:bookstore\\views\\clientlayout\\shop.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 499,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "layout.css",
+              "DocumentMoniker": "D:\\Code_C#\\Web_C#\\BookStoreWebsite\\bookstore\\bookstore\\Content\\CSS\\layout.css",
+              "RelativeDocumentMoniker": "bookstore\\Content\\CSS\\layout.css",
+              "ToolTip": "D:\\Code_C#\\Web_C#\\BookStoreWebsite\\bookstore\\bookstore\\Content\\CSS\\layout.css",
+              "RelativeToolTip": "bookstore\\Content\\CSS\\layout.css",
+              "ViewState": "AgIAAOIAAAAAAAAAAAAowPUAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-09T06:06:31.991Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Shop.cshtml",
+              "DocumentMoniker": "D:\\Code_C#\\Web_C#\\BookStoreWebsite\\bookstore\\bookstore\\Views\\ClientLayout\\Shop.cshtml",
+              "RelativeDocumentMoniker": "bookstore\\Views\\ClientLayout\\Shop.cshtml",
+              "ToolTip": "D:\\Code_C#\\Web_C#\\BookStoreWebsite\\bookstore\\bookstore\\Views\\ClientLayout\\Shop.cshtml",
+              "RelativeToolTip": "bookstore\\Views\\ClientLayout\\Shop.cshtml",
+              "ViewState": "AgIAAIQAAAAAAAAAAAAAAJ0AAABuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-09T06:37:58.026Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "home.css",
+              "DocumentMoniker": "D:\\Code_C#\\Web_C#\\BookStoreWebsite\\bookstore\\bookstore\\Content\\CSS\\home.css",
+              "RelativeDocumentMoniker": "bookstore\\Content\\CSS\\home.css",
+              "ToolTip": "D:\\Code_C#\\Web_C#\\BookStoreWebsite\\bookstore\\bookstore\\Content\\CSS\\home.css",
+              "RelativeToolTip": "bookstore\\Content\\CSS\\home.css",
+              "ViewState": "AgIAAPoAAAAAAAAAAAAswAUBAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-09T06:19:14.483Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Home.cshtml",
+              "DocumentMoniker": "D:\\Code_C#\\Web_C#\\BookStoreWebsite\\bookstore\\bookstore\\Views\\ClientLayout\\Home.cshtml",
+              "RelativeDocumentMoniker": "bookstore\\Views\\ClientLayout\\Home.cshtml",
+              "ToolTip": "D:\\Code_C#\\Web_C#\\BookStoreWebsite\\bookstore\\bookstore\\Views\\ClientLayout\\Home.cshtml",
+              "RelativeToolTip": "bookstore\\Views\\ClientLayout\\Home.cshtml",
+              "ViewState": "AgIAAMIAAAAAAAAAAAAAANUAAABoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-09T02:45:36.633Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedHeight": 53,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 123,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -85,3 +85,351 @@ C:\Users\Dell\Documents\Web\Web bán sách\bookstore\bookstore\bin\PagedList.dll
 C:\Users\Dell\Documents\Web\Web bán sách\bookstore\bookstore\bin\PagedList.Mvc.dll
 C:\Users\Dell\Documents\Web\Web bán sách\bookstore\bookstore\bin\PagedList.xml
 C:\Users\Dell\Documents\Web\Web bán sách\bookstore\bookstore\bin\PagedList.Mvc.xml
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\bookstore.dll.config
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\bookstore.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\bookstore.pdb
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\roslyn\csc.exe
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\roslyn\csc.exe.config
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\roslyn\csc.rsp
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\roslyn\csi.exe
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\roslyn\csi.exe.config
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\roslyn\csi.rsp
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\roslyn\Microsoft.Managed.Core.targets
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\roslyn\System.AppContext.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\roslyn\System.Collections.Immutable.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\roslyn\System.Console.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\roslyn\System.Globalization.Calendars.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\roslyn\System.IO.Compression.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\roslyn\System.IO.FileSystem.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\roslyn\System.Net.Http.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\roslyn\System.Net.Sockets.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\roslyn\System.Reflection.Metadata.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\roslyn\System.ValueTuple.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\roslyn\System.Xml.XmlDocument.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\roslyn\System.Xml.XPath.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\roslyn\vbc.exe
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\roslyn\vbc.exe.config
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\roslyn\vbc.rsp
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\roslyn\VBCSCompiler.exe
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\roslyn\VBCSCompiler.exe.config
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\Antlr3.Runtime.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\EntityFramework.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\EntityFramework.SqlServer.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\Microsoft.Web.Infrastructure.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\Newtonsoft.Json.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\PagedList.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\PagedList.Mvc.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\System.Web.Helpers.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\System.Web.Mvc.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\System.Web.Optimization.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\System.Web.Razor.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\System.Web.WebPages.Deployment.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\System.Web.WebPages.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\System.Web.WebPages.Razor.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\WebGrease.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\EntityFramework.xml
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\EntityFramework.SqlServer.xml
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\PagedList.xml
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\PagedList.Mvc.xml
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\System.Web.Helpers.xml
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\System.Web.Mvc.xml
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\System.Web.Optimization.xml
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\System.Web.Razor.xml
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\System.Web.WebPages.xml
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\System.Web.WebPages.Deployment.xml
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\System.Web.WebPages.Razor.xml
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\Newtonsoft.Json.xml
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\Antlr3.Runtime.pdb
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\obj\Debug\bookstore.csproj.AssemblyReference.cache
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\obj\Debug\bookstore.csproj.CoreCompileInputs.cache
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\obj\Debug\bookstore.csproj.CopyComplete
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\obj\Debug\bookstore.dll
+D:\web bán sách 1\Web bán sách\bookstore\bookstore\obj\Debug\bookstore.pdb
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\bookstore.dll.config
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\bookstore.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\bookstore.pdb
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\roslyn\csc.exe
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\roslyn\csc.exe.config
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\roslyn\csc.rsp
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\roslyn\csi.exe
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\roslyn\csi.exe.config
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\roslyn\csi.rsp
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\roslyn\System.AppContext.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\roslyn\System.Collections.Immutable.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\roslyn\System.Console.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\roslyn\System.Globalization.Calendars.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\roslyn\System.IO.Compression.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\roslyn\System.IO.FileSystem.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\roslyn\System.Net.Http.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\roslyn\System.Net.Sockets.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\roslyn\System.Reflection.Metadata.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\roslyn\System.ValueTuple.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\roslyn\System.Xml.XPath.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\roslyn\vbc.exe
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\roslyn\vbc.exe.config
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\roslyn\vbc.rsp
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\roslyn\VBCSCompiler.exe
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\roslyn\VBCSCompiler.exe.config
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\Antlr3.Runtime.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\EntityFramework.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\EntityFramework.SqlServer.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\Microsoft.Web.Infrastructure.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\Newtonsoft.Json.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\PagedList.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\PagedList.Mvc.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\System.Web.Helpers.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\System.Web.Mvc.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\System.Web.Optimization.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\System.Web.Razor.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\System.Web.WebPages.Deployment.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\System.Web.WebPages.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\System.Web.WebPages.Razor.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\WebGrease.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\EntityFramework.xml
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\EntityFramework.SqlServer.xml
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\PagedList.xml
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\PagedList.Mvc.xml
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\System.Web.Helpers.xml
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\System.Web.Mvc.xml
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\System.Web.Optimization.xml
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\System.Web.Razor.xml
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\System.Web.WebPages.xml
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\System.Web.WebPages.Deployment.xml
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\System.Web.WebPages.Razor.xml
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\Newtonsoft.Json.xml
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\Antlr3.Runtime.pdb
+D:\Web bán sách\Web bán sách\bookstore\bookstore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Web bán sách\Web bán sách\bookstore\bookstore\obj\Debug\bookstore.csproj.AssemblyReference.cache
+D:\Web bán sách\Web bán sách\bookstore\bookstore\obj\Debug\bookstore.csproj.CoreCompileInputs.cache
+D:\Web bán sách\Web bán sách\bookstore\bookstore\obj\Debug\bookstore.csproj.CopyComplete
+D:\Web bán sách\Web bán sách\bookstore\bookstore\obj\Debug\bookstore.dll
+D:\Web bán sách\Web bán sách\bookstore\bookstore\obj\Debug\bookstore.pdb
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\bookstore.dll.config
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\bookstore.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\bookstore.pdb
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\roslyn\csc.exe
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\roslyn\csc.exe.config
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\roslyn\csc.rsp
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\roslyn\csi.exe
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\roslyn\csi.exe.config
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\roslyn\csi.rsp
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\roslyn\System.AppContext.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\roslyn\System.Collections.Immutable.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\roslyn\System.Console.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\roslyn\System.Globalization.Calendars.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\roslyn\System.IO.Compression.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\roslyn\System.IO.FileSystem.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\roslyn\System.Net.Http.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\roslyn\System.Net.Sockets.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\roslyn\System.Reflection.Metadata.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\roslyn\System.ValueTuple.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\roslyn\System.Xml.XPath.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\roslyn\vbc.exe
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\roslyn\vbc.exe.config
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\roslyn\vbc.rsp
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\roslyn\VBCSCompiler.exe
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\roslyn\VBCSCompiler.exe.config
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\Antlr3.Runtime.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\EntityFramework.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\EntityFramework.SqlServer.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\Microsoft.Web.Infrastructure.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\Newtonsoft.Json.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\PagedList.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\PagedList.Mvc.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\System.Web.Helpers.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\System.Web.Mvc.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\System.Web.Optimization.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\System.Web.Razor.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\System.Web.WebPages.Deployment.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\System.Web.WebPages.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\System.Web.WebPages.Razor.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\WebGrease.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\EntityFramework.xml
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\EntityFramework.SqlServer.xml
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\PagedList.xml
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\PagedList.Mvc.xml
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\System.Web.Helpers.xml
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\System.Web.Mvc.xml
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\System.Web.Optimization.xml
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\System.Web.Razor.xml
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\System.Web.WebPages.xml
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\System.Web.WebPages.Deployment.xml
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\System.Web.WebPages.Razor.xml
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\Newtonsoft.Json.xml
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\Antlr3.Runtime.pdb
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\obj\Debug\bookstore.csproj.AssemblyReference.cache
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\obj\Debug\bookstore.csproj.CoreCompileInputs.cache
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\obj\Debug\bookstore.csproj.Up2Date
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\obj\Debug\bookstore.dll
+D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\obj\Debug\bookstore.pdb
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\bookstore.dll.config
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\bookstore.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\bookstore.pdb
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\roslyn\csc.exe
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\roslyn\csc.exe.config
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\roslyn\csc.rsp
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\roslyn\csi.exe
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\roslyn\csi.exe.config
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\roslyn\csi.rsp
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\roslyn\System.AppContext.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\roslyn\System.Collections.Immutable.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\roslyn\System.Console.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\roslyn\System.Globalization.Calendars.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\roslyn\System.IO.Compression.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\roslyn\System.IO.FileSystem.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\roslyn\System.Net.Http.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\roslyn\System.Net.Sockets.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\roslyn\System.Reflection.Metadata.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\roslyn\System.ValueTuple.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\roslyn\System.Xml.XPath.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\roslyn\vbc.exe
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\roslyn\vbc.exe.config
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\roslyn\vbc.rsp
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\roslyn\VBCSCompiler.exe
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\roslyn\VBCSCompiler.exe.config
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\Antlr3.Runtime.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\EntityFramework.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\EntityFramework.SqlServer.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\Microsoft.Web.Infrastructure.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\Newtonsoft.Json.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\PagedList.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\PagedList.Mvc.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\System.Web.Helpers.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\System.Web.Mvc.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\System.Web.Optimization.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\System.Web.Razor.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\System.Web.WebPages.Deployment.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\System.Web.WebPages.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\System.Web.WebPages.Razor.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\WebGrease.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\EntityFramework.xml
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\EntityFramework.SqlServer.xml
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\PagedList.xml
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\PagedList.Mvc.xml
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\System.Web.Helpers.xml
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\System.Web.Mvc.xml
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\System.Web.Optimization.xml
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\System.Web.Razor.xml
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\System.Web.WebPages.xml
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\System.Web.WebPages.Deployment.xml
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\System.Web.WebPages.Razor.xml
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\Newtonsoft.Json.xml
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\Antlr3.Runtime.pdb
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\obj\Debug\bookstore.csproj.AssemblyReference.cache
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\obj\Debug\bookstore.csproj.CoreCompileInputs.cache
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\obj\Debug\bookstore.csproj.Up2Date
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\obj\Debug\bookstore.dll
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\obj\Debug\bookstore.pdb

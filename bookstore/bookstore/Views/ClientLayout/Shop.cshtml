@@ -1,0 +1,203 @@
+﻿@model PagedList.PagedList<bookstore.Models.Book>
+@using PagedList.Mvc
+@{
+    ViewBag.Title = "Shop";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="~/Content/CSS/bootstrap.min.css"
+          rel="stylesheet" />
+    <script src="~/Content/JavaScript/bootstrap.bundle.min.js"></script>
+    <title>Tất cả sản phẩm</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        body {
+            color: #000;
+            background-color: #fff;
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 27px;
+        }
+        .info {
+            width: 100%;
+            position: relative;
+            display: flexbox;
+        }
+
+        .book {
+            position: relative;
+            font-size: 15px;
+            color: #000;
+            text-decoration: none;
+            font-weight: normal;
+            text-transform: none;
+            overflow: hidden;
+            margin-left: 10px;
+        }
+        .card-body {
+            padding: 0;
+        }
+
+        .col-sm-2 {
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+        .price {
+            position: relative;
+            font-size: 18px;
+            color: #f00;
+            overflow: hidden;
+            margin-left: 10px;
+        }
+        .pro_img {
+            padding: 10px;
+            width: 100%; 
+            height: 200px; 
+            display: flex; 
+            align-items:center; 
+            justify-content: center
+        }
+        .product:hover .pro_img img {
+            transform: scale(1.1);
+            transition: padding 0.5s ease-in-out;
+        }
+        .product:hover .card-body .book {
+            color: #ff5d7b;
+        }
+        .product:hover a {
+            text-decoration: none;
+        }
+
+        
+
+        .pagination {
+            position: relative;
+        }
+        .pagination p{
+            position: absolute;
+            right: 50px;
+        }
+
+
+            .pagination a {
+                position: relative;
+                left: 600px;
+                display: inline;
+                color: black;
+                margin: 8px;
+                font-size: 20px;
+                text-decoration: none;
+                transition: background-color .3s;
+            }
+
+
+                .pagination a:hover:not(.active) {
+                    background-color: #ddd;
+                    border-radius: 5px;
+                }
+
+           
+    </style>
+
+</head>
+
+<body>
+    <!-- Shop Start -->
+    <div class="container-fluid mt-5">
+        <div class="row px-xl-5">
+            <div class="col-lg-3 col-md-4">
+                <h5 class="section-title position-relative text-uppercase mb-3">
+                    Lọc theo giá tiền
+                </h5>
+                <div class="bg-light p-4 mb-30">
+                    <form>
+                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                            <input type="checkbox"
+                                   class="custom-control-input"
+                                   checked
+                                   id="price-all" />
+                            <label class="custom-control-label" for="price-all">Tất cả</label>
+                        </div>
+                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                            <input type="checkbox"
+                                   class="custom-control-input"
+                                   id="price-1" />
+                            <label class="custom-control-label" for="price-1">0 - 100.000</label>
+                        </div>
+                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                            <input type="checkbox"
+                                   class="custom-control-input"
+                                   id="price-2" />
+                            <label class="custom-control-label" for="price-2">100.000 - 300.000</label>
+                        </div>
+                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                            <input type="checkbox"
+                                   class="custom-control-input"
+                                   id="price-3" />
+                            <label class="custom-control-label" for="price-3">300.000 - 500.000</label>
+                        </div>
+                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                            <input type="checkbox"
+                                   class="custom-control-input"
+                                   id="price-4" />
+                            <label class="custom-control-label" for="price-4">Trên 500.000</label>
+                        </div>
+                        
+                    </form>
+                </div>
+                <!-- Price End -->
+            </div>
+            <!-- Shop Sidebar End -->
+            <!-- Shop Product Start -->
+            <div class="col-lg-9 col-md-8">
+                <div class="row">
+                    @{
+                        foreach (var book in Model)
+                        {
+                            <div class="col-sm-3 mb-2 product">
+                                <a href="@Url.Action("DetailProduct","ClientLayout", new {id = book.IdBook})">
+                                    <div class="card rounded">
+                                        <div class="pro_img">
+                                            <img src="~/Content/Images/@book.image"
+                                                    alt="" style="max-width: 100%; max-height: 100%; object-fit: contain" />
+                                        </div>
+
+                                        <div class="card-body">
+                                            <p class="book">@book.nameBook.Substring(0, 20)...</p>
+                                            <p class="price">@((book.price ?? 0).ToString("N0")) VND</p>
+
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        }
+
+                    }
+                    
+                </div>
+            </div>
+
+        </div>
+        <div class="pagination">
+            <p class="text">Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)</p>
+            <a>@Html.PagedListPager(Model, page => Url.Action("Shop", new { page = page }))</a>
+        </div>
+    </div>
+    <!-- Shop End -->
+
+</body>
+</html>
+
+

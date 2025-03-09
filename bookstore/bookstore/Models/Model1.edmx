@@ -88,7 +88,7 @@
           <Property Name="email" Type="varchar" MaxLength="50" />
           <Property Name="phone" Type="char" MaxLength="10" />
         </EntityType>
-        <Association Name="FK__Book__IdCate__5441852A">
+        <Association Name="FK__Book__IdCate__4222D4EF">
           <End Role="Category" Type="Self.Category" Multiplicity="0..1" />
           <End Role="Book" Type="Self.Book" Multiplicity="*" />
           <ReferentialConstraint>
@@ -100,7 +100,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Book__IdPub__5535A963">
+        <Association Name="FK__Book__IdPub__4316F928">
           <End Role="Publisher" Type="Self.Publisher" Multiplicity="0..1" />
           <End Role="Book" Type="Self.Book" Multiplicity="*" />
           <ReferentialConstraint>
@@ -112,7 +112,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__OrderDeta__IdBoo__5BE2A6F2">
+        <Association Name="FK__OrderDeta__IdBoo__49C3F6B7">
           <End Role="Book" Type="Self.Book" Multiplicity="1" />
           <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
           <ReferentialConstraint>
@@ -124,7 +124,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__OrderDeta__IdOrd__5CD6CB2B">
+        <Association Name="FK__OrderDeta__IdOrd__4AB81AF0">
           <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
           <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
           <ReferentialConstraint>
@@ -136,7 +136,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Orders__MaKH__4F7CD00D">
+        <Association Name="FK__Orders__MaKH__3D5E1FD2">
           <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
           <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
           <ReferentialConstraint>
@@ -148,7 +148,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Participa__IdBoo__59063A47">
+        <Association Name="FK__Participa__IdBoo__46E78A0C">
           <End Role="Book" Type="Self.Book" Multiplicity="1" />
           <End Role="Participate" Type="Self.Participate" Multiplicity="*" />
           <ReferentialConstraint>
@@ -160,7 +160,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Participat__IdAu__5812160E">
+        <Association Name="FK__Participat__IdAu__45F365D3">
           <End Role="Author" Type="Self.Author" Multiplicity="1" />
           <End Role="Participate" Type="Self.Participate" Multiplicity="*" />
           <ReferentialConstraint>
@@ -181,31 +181,31 @@
           <EntitySet Name="Participate" EntityType="Self.Participate" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Publisher" EntityType="Self.Publisher" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__Book__IdCate__5441852A" Association="Self.FK__Book__IdCate__5441852A">
+          <AssociationSet Name="FK__Book__IdCate__4222D4EF" Association="Self.FK__Book__IdCate__4222D4EF">
             <End Role="Category" EntitySet="Category" />
             <End Role="Book" EntitySet="Book" />
           </AssociationSet>
-          <AssociationSet Name="FK__Book__IdPub__5535A963" Association="Self.FK__Book__IdPub__5535A963">
+          <AssociationSet Name="FK__Book__IdPub__4316F928" Association="Self.FK__Book__IdPub__4316F928">
             <End Role="Publisher" EntitySet="Publisher" />
             <End Role="Book" EntitySet="Book" />
           </AssociationSet>
-          <AssociationSet Name="FK__OrderDeta__IdBoo__5BE2A6F2" Association="Self.FK__OrderDeta__IdBoo__5BE2A6F2">
+          <AssociationSet Name="FK__OrderDeta__IdBoo__49C3F6B7" Association="Self.FK__OrderDeta__IdBoo__49C3F6B7">
             <End Role="Book" EntitySet="Book" />
             <End Role="OrderDetail" EntitySet="OrderDetail" />
           </AssociationSet>
-          <AssociationSet Name="FK__OrderDeta__IdOrd__5CD6CB2B" Association="Self.FK__OrderDeta__IdOrd__5CD6CB2B">
+          <AssociationSet Name="FK__OrderDeta__IdOrd__4AB81AF0" Association="Self.FK__OrderDeta__IdOrd__4AB81AF0">
             <End Role="Orders" EntitySet="Orders" />
             <End Role="OrderDetail" EntitySet="OrderDetail" />
           </AssociationSet>
-          <AssociationSet Name="FK__Orders__MaKH__4F7CD00D" Association="Self.FK__Orders__MaKH__4F7CD00D">
+          <AssociationSet Name="FK__Orders__MaKH__3D5E1FD2" Association="Self.FK__Orders__MaKH__3D5E1FD2">
             <End Role="Users" EntitySet="Users" />
             <End Role="Orders" EntitySet="Orders" />
           </AssociationSet>
-          <AssociationSet Name="FK__Participa__IdBoo__59063A47" Association="Self.FK__Participa__IdBoo__59063A47">
+          <AssociationSet Name="FK__Participa__IdBoo__46E78A0C" Association="Self.FK__Participa__IdBoo__46E78A0C">
             <End Role="Book" EntitySet="Book" />
             <End Role="Participate" EntitySet="Participate" />
           </AssociationSet>
-          <AssociationSet Name="FK__Participat__IdAu__5812160E" Association="Self.FK__Participat__IdAu__5812160E">
+          <AssociationSet Name="FK__Participat__IdAu__45F365D3" Association="Self.FK__Participat__IdAu__45F365D3">
             <End Role="Author" EntitySet="Author" />
             <End Role="Participate" EntitySet="Participate" />
           </AssociationSet>
@@ -224,7 +224,7 @@
           <Property Name="phone" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
           <Property Name="address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="story" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Participates" Relationship="Self.FK__Participat__IdAu__5812160E" FromRole="Author" ToRole="Participate" />
+          <NavigationProperty Name="Participates" Relationship="Self.FK__Participat__IdAu__45F365D3" FromRole="Author" ToRole="Participate" />
         </EntityType>
         <EntityType Name="Book">
           <Key>
@@ -238,10 +238,10 @@
           <Property Name="quality" Type="Int32" />
           <Property Name="IdCate" Type="Int32" />
           <Property Name="IdPub" Type="Int32" />
-          <NavigationProperty Name="Category" Relationship="Self.FK__Book__IdCate__5441852A" FromRole="Book" ToRole="Category" />
-          <NavigationProperty Name="Publisher" Relationship="Self.FK__Book__IdPub__5535A963" FromRole="Book" ToRole="Publisher" />
-          <NavigationProperty Name="OrderDetails" Relationship="Self.FK__OrderDeta__IdBoo__5BE2A6F2" FromRole="Book" ToRole="OrderDetail" />
-          <NavigationProperty Name="Participates" Relationship="Self.FK__Participa__IdBoo__59063A47" FromRole="Book" ToRole="Participate" />
+          <NavigationProperty Name="Category" Relationship="Self.FK__Book__IdCate__4222D4EF" FromRole="Book" ToRole="Category" />
+          <NavigationProperty Name="Publisher" Relationship="Self.FK__Book__IdPub__4316F928" FromRole="Book" ToRole="Publisher" />
+          <NavigationProperty Name="OrderDetails" Relationship="Self.FK__OrderDeta__IdBoo__49C3F6B7" FromRole="Book" ToRole="OrderDetail" />
+          <NavigationProperty Name="Participates" Relationship="Self.FK__Participa__IdBoo__46E78A0C" FromRole="Book" ToRole="Participate" />
         </EntityType>
         <EntityType Name="Category">
           <Key>
@@ -249,7 +249,7 @@
           </Key>
           <Property Name="IdCate" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Books" Relationship="Self.FK__Book__IdCate__5441852A" FromRole="Category" ToRole="Book" />
+          <NavigationProperty Name="Books" Relationship="Self.FK__Book__IdCate__4222D4EF" FromRole="Category" ToRole="Book" />
         </EntityType>
         <EntityType Name="OrderDetail">
           <Key>
@@ -260,8 +260,8 @@
           <Property Name="IdOrder" Type="Int32" Nullable="false" />
           <Property Name="quanlity" Type="Int32" />
           <Property Name="price" Type="Int32" />
-          <NavigationProperty Name="Book" Relationship="Self.FK__OrderDeta__IdBoo__5BE2A6F2" FromRole="OrderDetail" ToRole="Book" />
-          <NavigationProperty Name="Order" Relationship="Self.FK__OrderDeta__IdOrd__5CD6CB2B" FromRole="OrderDetail" ToRole="Orders" />
+          <NavigationProperty Name="Book" Relationship="Self.FK__OrderDeta__IdBoo__49C3F6B7" FromRole="OrderDetail" ToRole="Book" />
+          <NavigationProperty Name="Order" Relationship="Self.FK__OrderDeta__IdOrd__4AB81AF0" FromRole="OrderDetail" ToRole="Orders" />
         </EntityType>
         <EntityType Name="Order">
           <Key>
@@ -272,8 +272,8 @@
           <Property Name="oderDate" Type="DateTime" Precision="0" />
           <Property Name="deliveryDate" Type="DateTime" Precision="0" />
           <Property Name="MaKH" Type="Int32" />
-          <NavigationProperty Name="OrderDetails" Relationship="Self.FK__OrderDeta__IdOrd__5CD6CB2B" FromRole="Orders" ToRole="OrderDetail" />
-          <NavigationProperty Name="User" Relationship="Self.FK__Orders__MaKH__4F7CD00D" FromRole="Orders" ToRole="Users" />
+          <NavigationProperty Name="OrderDetails" Relationship="Self.FK__OrderDeta__IdOrd__4AB81AF0" FromRole="Orders" ToRole="OrderDetail" />
+          <NavigationProperty Name="User" Relationship="Self.FK__Orders__MaKH__3D5E1FD2" FromRole="Orders" ToRole="Users" />
         </EntityType>
         <EntityType Name="Participate">
           <Key>
@@ -284,8 +284,8 @@
           <Property Name="IdBook" Type="Int32" Nullable="false" />
           <Property Name="role" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="location" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Author" Relationship="Self.FK__Participat__IdAu__5812160E" FromRole="Participate" ToRole="Author" />
-          <NavigationProperty Name="Book" Relationship="Self.FK__Participa__IdBoo__59063A47" FromRole="Participate" ToRole="Book" />
+          <NavigationProperty Name="Author" Relationship="Self.FK__Participat__IdAu__45F365D3" FromRole="Participate" ToRole="Author" />
+          <NavigationProperty Name="Book" Relationship="Self.FK__Participa__IdBoo__46E78A0C" FromRole="Participate" ToRole="Book" />
         </EntityType>
         <EntityType Name="Publisher">
           <Key>
@@ -295,7 +295,7 @@
           <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="phone" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
           <Property Name="address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Books" Relationship="Self.FK__Book__IdPub__5535A963" FromRole="Publisher" ToRole="Book" />
+          <NavigationProperty Name="Books" Relationship="Self.FK__Book__IdPub__4316F928" FromRole="Publisher" ToRole="Book" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -310,9 +310,9 @@
           <Property Name="address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="phone" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
-          <NavigationProperty Name="Orders" Relationship="Self.FK__Orders__MaKH__4F7CD00D" FromRole="Users" ToRole="Orders" />
+          <NavigationProperty Name="Orders" Relationship="Self.FK__Orders__MaKH__3D5E1FD2" FromRole="Users" ToRole="Orders" />
         </EntityType>
-        <Association Name="FK__Participat__IdAu__5812160E">
+        <Association Name="FK__Participat__IdAu__45F365D3">
           <End Role="Author" Type="Self.Author" Multiplicity="1" />
           <End Role="Participate" Type="Self.Participate" Multiplicity="*" />
           <ReferentialConstraint>
@@ -324,7 +324,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Book__IdCate__5441852A">
+        <Association Name="FK__Book__IdCate__4222D4EF">
           <End Role="Category" Type="Self.Category" Multiplicity="0..1" />
           <End Role="Book" Type="Self.Book" Multiplicity="*" />
           <ReferentialConstraint>
@@ -336,7 +336,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Book__IdPub__5535A963">
+        <Association Name="FK__Book__IdPub__4316F928">
           <End Role="Publisher" Type="Self.Publisher" Multiplicity="0..1" />
           <End Role="Book" Type="Self.Book" Multiplicity="*" />
           <ReferentialConstraint>
@@ -348,7 +348,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__OrderDeta__IdBoo__5BE2A6F2">
+        <Association Name="FK__OrderDeta__IdBoo__49C3F6B7">
           <End Role="Book" Type="Self.Book" Multiplicity="1" />
           <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
           <ReferentialConstraint>
@@ -360,7 +360,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Participa__IdBoo__59063A47">
+        <Association Name="FK__Participa__IdBoo__46E78A0C">
           <End Role="Book" Type="Self.Book" Multiplicity="1" />
           <End Role="Participate" Type="Self.Participate" Multiplicity="*" />
           <ReferentialConstraint>
@@ -372,7 +372,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__OrderDeta__IdOrd__5CD6CB2B">
+        <Association Name="FK__OrderDeta__IdOrd__4AB81AF0">
           <End Role="Orders" Type="Self.Order" Multiplicity="1" />
           <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
           <ReferentialConstraint>
@@ -384,7 +384,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Orders__MaKH__4F7CD00D">
+        <Association Name="FK__Orders__MaKH__3D5E1FD2">
           <End Role="Users" Type="Self.User" Multiplicity="0..1" />
           <End Role="Orders" Type="Self.Order" Multiplicity="*" />
           <ReferentialConstraint>
@@ -405,31 +405,31 @@
           <EntitySet Name="Participates" EntityType="Self.Participate" />
           <EntitySet Name="Publishers" EntityType="Self.Publisher" />
           <EntitySet Name="Users" EntityType="Self.User" />
-          <AssociationSet Name="FK__Participat__IdAu__5812160E" Association="Self.FK__Participat__IdAu__5812160E">
+          <AssociationSet Name="FK__Participat__IdAu__45F365D3" Association="Self.FK__Participat__IdAu__45F365D3">
             <End Role="Author" EntitySet="Authors" />
             <End Role="Participate" EntitySet="Participates" />
           </AssociationSet>
-          <AssociationSet Name="FK__Book__IdCate__5441852A" Association="Self.FK__Book__IdCate__5441852A">
+          <AssociationSet Name="FK__Book__IdCate__4222D4EF" Association="Self.FK__Book__IdCate__4222D4EF">
             <End Role="Category" EntitySet="Categories" />
             <End Role="Book" EntitySet="Books" />
           </AssociationSet>
-          <AssociationSet Name="FK__Book__IdPub__5535A963" Association="Self.FK__Book__IdPub__5535A963">
+          <AssociationSet Name="FK__Book__IdPub__4316F928" Association="Self.FK__Book__IdPub__4316F928">
             <End Role="Publisher" EntitySet="Publishers" />
             <End Role="Book" EntitySet="Books" />
           </AssociationSet>
-          <AssociationSet Name="FK__OrderDeta__IdBoo__5BE2A6F2" Association="Self.FK__OrderDeta__IdBoo__5BE2A6F2">
+          <AssociationSet Name="FK__OrderDeta__IdBoo__49C3F6B7" Association="Self.FK__OrderDeta__IdBoo__49C3F6B7">
             <End Role="Book" EntitySet="Books" />
             <End Role="OrderDetail" EntitySet="OrderDetails" />
           </AssociationSet>
-          <AssociationSet Name="FK__Participa__IdBoo__59063A47" Association="Self.FK__Participa__IdBoo__59063A47">
+          <AssociationSet Name="FK__Participa__IdBoo__46E78A0C" Association="Self.FK__Participa__IdBoo__46E78A0C">
             <End Role="Book" EntitySet="Books" />
             <End Role="Participate" EntitySet="Participates" />
           </AssociationSet>
-          <AssociationSet Name="FK__OrderDeta__IdOrd__5CD6CB2B" Association="Self.FK__OrderDeta__IdOrd__5CD6CB2B">
+          <AssociationSet Name="FK__OrderDeta__IdOrd__4AB81AF0" Association="Self.FK__OrderDeta__IdOrd__4AB81AF0">
             <End Role="Orders" EntitySet="Orders" />
             <End Role="OrderDetail" EntitySet="OrderDetails" />
           </AssociationSet>
-          <AssociationSet Name="FK__Orders__MaKH__4F7CD00D" Association="Self.FK__Orders__MaKH__4F7CD00D">
+          <AssociationSet Name="FK__Orders__MaKH__3D5E1FD2" Association="Self.FK__Orders__MaKH__3D5E1FD2">
             <End Role="Users" EntitySet="Users" />
             <End Role="Orders" EntitySet="Orders" />
           </AssociationSet>

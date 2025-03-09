@@ -1,12 +1,15 @@
 ﻿using bookstore.Models;
+using PagedList;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
+using System.Net;
 using System.Security.Cryptography;
 using System.Text;
 using System.Web;
 using System.Web.Mvc;
+using PagedList.Mvc;
 
 namespace bookstore.Controllers
 {
@@ -17,6 +20,31 @@ namespace bookstore.Controllers
         public ActionResult Home()
         {
             return View(db.Books.ToList());
+        }
+
+        public PartialViewResult SachMoiPartial()
+        {
+            return PartialView(db.Books.OrderByDescending(n => n.IdBook).ToList());
+        }
+
+        public ActionResult Shop(int? page)
+        {
+            //số sản phẩm trên 1 trang
+            int pageSize = 16;
+            //Số trang
+            int pageNumber = page ?? 1;
+
+            return View(db.Books.ToList().OrderBy(n => n.IdBook).ToPagedList(pageNumber, pageSize));
+        }
+
+        public ActionResult About()
+        {
+            return View();
+        }
+
+        public ActionResult Contact()
+        {
+            return View();
         }
 
         //GET: Register
@@ -38,7 +66,7 @@ namespace bookstore.Controllers
                     db.Configuration.ValidateOnSaveEnabled = false;
                     if (_user.role == null)
                     {
-                        _user.role = "2";
+                        _user.role = "Khách hàng";
                     }
                     db.Users.Add(_user);
                     db.SaveChanges();
@@ -76,17 +104,19 @@ namespace bookstore.Controllers
                
                 if (userCheck != null)
                 {
-                    if(user.role == "2") 
+                    var role = userCheck.role;
+                    if(role == "Chủ web") 
                     {
                         //add session
                         Session["User"] = userCheck;
-                        return RedirectToAction("Home");
+                        return RedirectToAction("Index", "Books");
+                        
                     }
                     else
                     {
                         //add session
                         Session["User"] = userCheck;
-                        return RedirectToAction("IndexBook", "Books");
+                        return RedirectToAction("Home", "ClientLayout");
                     }
                     
                 }
@@ -103,6 +133,20 @@ namespace bookstore.Controllers
         {
             Session.Clear();//remove session
             return RedirectToAction("Home", "ClientLayout");
+        }
+
+        public ActionResult DetailProduct(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Book book = db.Books.Find(id);
+            if (book == null)
+            {
+                return HttpNotFound();
+            }
+            return View(book);
         }
     }
 }

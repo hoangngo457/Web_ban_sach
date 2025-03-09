@@ -1,0 +1,141 @@
+﻿@model bookstore.Models.Book
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="~/Content/CSS/bootstrap.min.css"
+          rel="stylesheet" />
+    <title>Chi tiết sản phẩm</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        .img-content {
+            float: left;
+            margin-left: 180px;
+            margin-top: 30px;
+        }
+        .detail {
+            width: 500px;
+            float: left;
+            margin-top: 100px;
+            background-color: #fff;
+        }
+
+            .detail th {
+                vertical-align: top;
+            }
+
+            .detail tr th {
+                
+                padding: 3px;
+            }
+
+        .btn {
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+
+            .btn:hover {
+                background-color: #03c;
+            }
+
+        .description {
+            background-color: #f8f8ff;
+            border: 1px solid #eee;
+            border-radius: 10px;
+            padding: 10px 20px;
+            margin-top: 500px;
+        }
+
+            .description h2 {
+                text-align: center;
+            }
+
+        .title {
+            font-size: 24px;
+            color: #000;
+        }
+
+        .para {
+            font-size: 20px;
+            padding-left: 10px;
+            margin-bottom: 20px;
+        }
+
+        .price {
+            font-size: 22px;
+        }
+        .text-danger{
+            font-size: 18px;
+            color: #f00;
+            padding-top: 3px;
+
+        }
+    </style>
+
+</head>
+<body>
+        <div class="container-fluidl">
+            <div class="img-content">
+                <img src="@Url.Content("~/Content/Images/"+Model.image)" alt="" height="400" />
+            </div>
+            <div class="detail">
+                <table>
+                    <tr>
+                        <th>Tên sách:</th>
+                        <td class="title">@Html.DisplayFor(model => model.nameBook)</td>
+                    </tr>
+                    <tr>
+                        <th>Giá:</th>
+                        <td class="text-danger price">@Html.DisplayFor(model => model.price) VND</td>
+                    </tr>
+                    <tr>
+                        <th>Tình trạng:</th>
+                        <td class="text-danger">
+                            @if (Model.quality == 0)
+                            {
+                                <p>Hết hàng</p>
+                            }
+                            else
+                            {
+                                <p>Còn hàng</p>
+                            }
+                        </td>
+                    </tr>
+                    <tr class="mt-0">
+                        <th>Số lượng:</th>
+                        <td>
+                            <input type="number" min="1" value="1" style="width: 50px" />
+                        </td>
+                    </tr>
+                </table>
+                @using (Html.BeginForm("ThemGioHang", "GioHang", new { @iMaSach = Model.IdBook, @strURL = Request.Url.ToString() }))
+                {
+                    <input type="submit" style="cursor:pointer" value="Thêm vào giỏ hàng" id="btnGioHang" class="btn btn-primary" />}
+
+            </div>
+        </div>
+    
+        <div class="container-fluid">
+            <div class="description">
+                <h2>Giới thiệu sách</h2>
+                <div class="para">
+                    @Html.DisplayFor(model => model.description)
+                </div>
+            </div>
+        </div>
+    
+
+</body>
+</html>
+

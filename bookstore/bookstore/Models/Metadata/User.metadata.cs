@@ -7,8 +7,6 @@ using System.ComponentModel.DataAnnotations;
 
 namespace bookstore.Models
 {
-     
-    
     public partial class User
     {
         internal sealed class Usermetadata
