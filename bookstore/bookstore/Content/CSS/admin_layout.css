@@ -51,35 +51,62 @@ boby {
 .hoz-navgi {
     position: fixed;
     z-index: 1;
-    margin-top: 5px;
-/*    height: 100%;
-    background-color: #eee;*/
+    margin-top: 7px;
+    height: 100vh;
     margin-left: -15px;
+    border-right: 1px solid #C0C0C0;
+
 }
+
+
+.log_out {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.log_out a{
+    position: absolute;
+    bottom: 100px;
+    left: 15px;
+    font-size: 16px;
+    color: #f00;
+}
+    .log_out a:hover {
+        color: #CD0000;
+        text-decoration: none;
+    }
+
 
     .hoz-navgi ul li {
         position: relative;
         list-style-type: none;
         z-index: 1;
+        
     }
 
-   
+
 
         .hoz-navgi ul li a {
-            color: #fff;
+            color: #000;
             float: left;
-            width: 250px;
+            width: 20vw;
             text-decoration: none;
             font-size: 20px;
-            background-color: #444;
+            background-color: #fff;
             padding: 20px 15px;
             position: relative;
             z-index: 1;
+            border-bottom: 1px solid #C0C0C0;
         }
 
         .hoz-navgi ul li:hover a {
             background-color: #a9a9a9;
+            color: #fff;
         }
+.active {
+    background-color: #00008B !important;
+    color: #fff !important;
+}
 
 .right-side {
     position: absolute;

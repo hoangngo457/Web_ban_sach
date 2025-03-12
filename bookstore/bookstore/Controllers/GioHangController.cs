@@ -190,6 +190,7 @@ namespace bookstore.Controllers
             List<GioHang> gh = LayGioHang();
             ddh.MaKH = kh.IdUser;
             ddh.oderDate = DateTime.Now;
+            ddh.status = "Chờ duyệt";
             db.Orders.Add(ddh);
             db.SaveChanges();
             //chi tiết đơn hàng
@@ -200,9 +201,19 @@ namespace bookstore.Controllers
                 ctgh.IdBook = item.iMaSach;
                 ctgh.quanlity = item.iSoLuong;
                 ctgh.price = (int) item.dDonGia;
-                db.OrderDetails.Add(ctgh);      
+                db.OrderDetails.Add(ctgh);
+
+                Book book = db.Books.Find(item.iMaSach);
+                if (book != null)
+                {
+                    book.quality = book.quality - item.iSoLuong;
+                    db.SaveChanges();
+                }
+                
+
             }
             db.SaveChanges();
+
             List<GioHang> listGioHang = Session["GioHang"] as List<GioHang>;
             listGioHang.Clear();
             return RedirectToAction("DatHangThanhCong","GioHang");

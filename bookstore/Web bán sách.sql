@@ -121,7 +121,7 @@ values(N'NXB Kim Đồng','0356734323','34 a'),
 
 --Thêm admin
 INSERT INTO Users(username, password, confirmPassword, role)
-values('admin','admin', 'admin','Chủ web')
+values('admin','admin', 'admin','admin')
 --INSERT Book
 INSERT INTO Book(nameBook, description, price, image, quality, IdCate, IdPub)
 values(N'Bộ Sách Giáo Dục Toàn Diện Cho Học Sinh Tiểu Học( Bộ 3 Cuốn)',N'Trong quá trình trưởng thành, mỗi một trải nghiệm đều là một thu hoạch, thử nghĩ xem, trong những trải nghiệm này, chúng ta đã làm việc gì đáng được mọi người khen ngợi, hoặc việc gì cần phải kiểm điểm lại. Học cách tư duy tích cực và thực hành thực tế, quá trình rèn luyện từ suy nghĩ tới hành động, trẻ sẽ dần dần xây dựng được sức mạnh của mình.','180000','sachgiaoductoandien.png','10','1','1'),

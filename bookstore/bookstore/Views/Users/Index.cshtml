@@ -25,8 +25,8 @@
                 <th class="col-xl-2">
                     Họ tên
                 </th>
-                <th class="col-xl-2">
-                    Vài trò
+                <th class="col-xl-1">
+                    Vai trò
                 </th>
                 <th class="col-xl-2">
                     Địa chỉ
@@ -37,7 +37,7 @@
                 <th class="col-xl-2">
                     Email
                 </th>
-                <th class="col-xl-2"></th>
+                <th class="col-xl-3"></th>
             </tr>
 
             @foreach (var item in Model)
@@ -47,7 +47,7 @@
                     <td class="col-xl-2">
                         @Html.DisplayFor(modelItem => item.name)
                     </td>
-                    <td class="col-xl-2">
+                    <td class="col-xl-1">
                         @Html.DisplayFor(modelItem => item.role)
                     </td>
                     <td class="col-xl-2">
@@ -59,7 +59,7 @@
                     <td class="col-xl-2">
                         @Html.DisplayFor(modelItem => item.email)
                     </td>
-                    <td class="col-xl-2">
+                    <td class="col-xl-3">
                         <a href="@Url.Action("Details","Users", new {id = item.IdUser})" class="btn btn-success">Chi tiết</a>
                         <a class="btn btn-danger" onclick="ConfirmDelete(@item.IdUser)">Xóa <i class="glyphicon-trash"></i>  </a>
 

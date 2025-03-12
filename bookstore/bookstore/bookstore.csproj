@@ -160,6 +160,7 @@
     </Compile>
     <Compile Include="Models\GioHang.cs" />
     <Compile Include="Models\Metadata\Book.metadata.cs" />
+    <Compile Include="Models\Metadata\Order.metedata.cs" />
     <Compile Include="Models\Metadata\User.metadata.cs" />
     <Compile Include="Models\Model1.Context.cs">
       <AutoGen>True</AutoGen>
@@ -218,9 +219,12 @@
     <Content Include="Content\CSS\home.css" />
     <Content Include="Content\CSS\layout.css" />
     <Content Include="Content\CSS\login.css" />
+    <Content Include="Content\CSS\product_detail.css" />
     <Content Include="Content\CSS\themify-icons.css" />
+    <Content Include="Content\Icon\user.png" />
     <Content Include="Content\Icon\facebook.png" />
     <Content Include="Content\Icon\instagram.png" />
+    <Content Include="Content\Icon\log-out.png" />
     <Content Include="Content\Icon\momo.png" />
     <Content Include="Content\Icon\pinterest.png" />
     <Content Include="Content\Icon\twitter.png" />

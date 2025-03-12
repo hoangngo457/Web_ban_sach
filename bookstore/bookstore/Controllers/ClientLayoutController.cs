@@ -66,7 +66,7 @@ namespace bookstore.Controllers
                     db.Configuration.ValidateOnSaveEnabled = false;
                     if (_user.role == null)
                     {
-                        _user.role = "Khách hàng";
+                        _user.role = "user";
                     }
                     db.Users.Add(_user);
                     db.SaveChanges();
@@ -105,20 +105,9 @@ namespace bookstore.Controllers
                 if (userCheck != null)
                 {
                     var role = userCheck.role;
-                    if(role == "Chủ web") 
-                    {
-                        //add session
-                        Session["User"] = userCheck;
-                        return RedirectToAction("Index", "Books");
-                        
-                    }
-                    else
-                    {
-                        //add session
-                        Session["User"] = userCheck;
-                        return RedirectToAction("Home", "ClientLayout");
-                    }
-                    
+                    Session["User"] = userCheck;
+                    return RedirectToAction("Home", "ClientLayout");
+
                 }
                 else
                 {

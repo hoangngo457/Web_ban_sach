@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="~/Content/CSS/layout.css" />
 
 
+
 </head>
 <body>
     @{ var user = Session["User"] as bookstore.Models.User;}
@@ -23,13 +24,30 @@
                 <div class="form-login">
                     @if (user != null)
                     {
-                        <ul class="form-a">
-                            <li>Xin chào, <a href=""> @user.name  </a></li>
-                            <li><a href="~/ClientLayout/Logout">Đăng xuất</a></li>
-                        </ul>
+                        <div class="user_action">
+                            <a class="user-btn" id="userBtn">
+                                <img src="~/Content/Icon/user.png" alt="user">
+                                <span id="userName"></span>
+                            </a>
+
+                            <div class="menu" id="menu">
+                                @{
+                                    if (user.role == "admin")
+                                    {
+                                        <a href="~/Books/Index">Trang quản lí</a>
+                                    }
+                                }
+                                <a href="#">Đổi mật khẩu</a>
+                                <a href="#">Sửa thông tin cá nhân</a>
+                                <a class="log-out" href="~/ClientLayout/Logout">Đăng xuất</a>
+                            </div>
+                        </div>
+
+
+
                     }
-                    else
-                    {
+                                    else
+                                    {
                         <ul>
                             <li>@Html.ActionLink("Đăng kí", "Register", "ClientLayout")</li>  |
                             <li>@Html.ActionLink("Đăng nhập", "Login", "ClientLayout")</li>
@@ -67,7 +85,7 @@
                         </div>
 
                     </div>
-                    <a href="~/GioHang/GioHang" >
+                    <a href="~/GioHang/GioHang">
                         @Html.Action("GioHangPartial", "GioHang")
                     </a>
                     <!-- Đăng nhập thành công hiện cái này -->
@@ -84,68 +102,94 @@
     @RenderBody()
 
     <!-- Footer strat -->
-<footer class="footer">
-    <div class="container foo-top">
-        <div class="row">
-            <div class="col-md-2 col-sm-6">
-                <div class="widget widget-navigation">
-                    <h4 class="widget-title">THÔNG TIN VỀ CỬA HÀNG</h4>
-                    <ul>
-                        <li><b>Tên cửa hàng</b></li>
-                        <li>Tiệm sách BookStore</li>
-                        <li><b>Địa chỉ</b></li>
-                        <li>Nguyễn Văn Lượng, Gò Vấp, TP.Hồ Chí Minh</li>
-                        <li><b>Email</b></li>
-                        <li>hoangngo457@gmail.com</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-2 offset-md-1 col-sm-6">
-                <div class="widget widget-navigation">
-                    <h4 class="widget-title">VỀ CHÚNG TÔI</h4>
-                    <ul>
-                        <li><a href="~/ClientLayout/Home">Trang chủ</a></li>
-                        <li><a href="~/ClientLayout/Shop">Sản phẩm</a></li>
-                        <li><a href="~/ClientLayout/About">Giới thiệu</a></li>
-                        <li><a href="~/ClientLayout/Contact">Liên hệ</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-2 offset-md-1 col-sm-6">
-                <div class="widget widget-navigation">
-                    <h4 class="widget-title">CHÍNH SÁCH </h4>
-                    <ul>
-                        <li><a href="#">Chính sách mua hàng</a></li>
-                        <li><a href="#">Chính sách đổi trả</a></li>
-                        <li><a href="#">Chăm sóc khách hàng</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-3 offset-md-1 col-sm-6">
-                <div class="widget widget-social">
-                    <h4 class="widget-title">THÔNG TIN LIÊN HỆ</h4>
-                    <div class="social-media">
-                        <a href="#"><img src="~/Content/Icon/facebook.png" alt="Facebook"/></a>
-                        <a href="#"><img src="~/Content/Icon/twitter.png" alt="Twitter" /></a>
-                        <a href="#"><img src="~/Content/Icon/pinterest.png" alt="Pinterest" /></a>
-                        <a href="#"><img src="~/Content/Icon/instagram.png" alt="Instagram" /></a>
+    <footer class="footer">
+        <div class="container foo-top">
+            <div class="row">
+                <div class="col-md-2 col-sm-6">
+                    <div class="widget widget-navigation">
+                        <h4 class="widget-title">THÔNG TIN VỀ CỬA HÀNG</h4>
+                        <ul>
+                            <li><b>Tên cửa hàng</b></li>
+                            <li>Tiệm sách BookStore</li>
+                            <li><b>Địa chỉ</b></li>
+                            <li>Nguyễn Văn Lượng, Gò Vấp, TP.Hồ Chí Minh</li>
+                            <li><b>Email</b></li>
+                            <li>hoangngo457@gmail.com</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="widget widget-payment">
-                    <h4 class="widget-title">PHƯƠNG THỨC THANH TOÁN</h4>
-                    <div class="payment">
-                        <img src="~/Content/Icon/visa.png" alt="Visa" width="78" height="50"/>
-                        <img src="~/Content/Icon/momo.png" alt="Momo" />
+                <div class="col-md-2 offset-md-1 col-sm-6">
+                    <div class="widget widget-navigation">
+                        <h4 class="widget-title">VỀ CHÚNG TÔI</h4>
+                        <ul>
+                            <li><a href="~/ClientLayout/Home">Trang chủ</a></li>
+                            <li><a href="~/ClientLayout/Shop">Sản phẩm</a></li>
+                            <li><a href="~/ClientLayout/About">Giới thiệu</a></li>
+                            <li><a href="~/ClientLayout/Contact">Liên hệ</a></li>
+                        </ul>
                     </div>
                 </div>
-            </div>
+                <div class="col-md-2 offset-md-1 col-sm-6">
+                    <div class="widget widget-navigation">
+                        <h4 class="widget-title">CHÍNH SÁCH </h4>
+                        <ul>
+                            <li><a href="#">Chính sách mua hàng</a></li>
+                            <li><a href="#">Chính sách đổi trả</a></li>
+                            <li><a href="#">Chăm sóc khách hàng</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 offset-md-1 col-sm-6">
+                    <div class="widget widget-social">
+                        <h4 class="widget-title">THÔNG TIN LIÊN HỆ</h4>
+                        <div class="social-media">
+                            <a href="#"><img src="~/Content/Icon/facebook.png" alt="Facebook" /></a>
+                            <a href="#"><img src="~/Content/Icon/twitter.png" alt="Twitter" /></a>
+                            <a href="#"><img src="~/Content/Icon/pinterest.png" alt="Pinterest" /></a>
+                            <a href="#"><img src="~/Content/Icon/instagram.png" alt="Instagram" /></a>
+                        </div>
+                    </div>
+                    <div class="widget widget-payment">
+                        <h4 class="widget-title">PHƯƠNG THỨC THANH TOÁN</h4>
+                        <div class="payment">
+                            <img src="~/Content/Icon/visa.png" alt="Visa" width="78" height="50" />
+                            <img src="~/Content/Icon/momo.png" alt="Momo" />
+                        </div>
+                    </div>
+                </div>
 
+            </div>
         </div>
-    </div>
-    <div class="copyright">
-        <p>© Ngô Xuân Hoàng(hoangngo457)</p>
-    </div>
-</footer>
+        <div class="copyright">
+            <p>© Ngô Xuân Hoàng(hoangngo457)</p>
+        </div>
+    </footer>
     <!-- Footer end -->
 </body>
 </html>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+<script>
+    $(document).ready(function () {
+        $("#userBtn").click(function (event) {
+            $("#menu").toggle();
+            event.stopPropagation();
+        });
+
+        $(document).click(function () {
+            $("#menu").hide();
+        });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        let userName = "@(user?.name ?? "")"; 
+        if (userName.trim() !== "") { 
+            let parts = userName.trim().split(" ");
+            let lastTwo = parts.slice(-2).join(" ");
+            document.getElementById("userName").textContent = lastTwo;
+        }
+    });
+
+</script>

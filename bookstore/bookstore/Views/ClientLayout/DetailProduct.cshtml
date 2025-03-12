@@ -12,82 +12,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="~/Content/CSS/bootstrap.min.css"
           rel="stylesheet" />
+    <link rel="stylesheet" href="~/Content/CSS/product_detail.css"/>
     <title>Chi tiết sản phẩm</title>
-    <style>
-        *{
-            padding: 0;
-            margin: 0;
-        }
-
-        .img-content {
-            float: left;
-            margin-left: 180px;
-            margin-top: 30px;
-        }
-        .detail {
-            width: 500px;
-            float: left;
-            margin-top: 100px;
-            background-color: #fff;
-        }
-
-            .detail th {
-                vertical-align: top;
-            }
-
-            .detail tr th {
-                
-                padding: 3px;
-            }
-
-        .btn {
-            margin-top: 20px;
-            margin-left: 10px;
-        }
-
-            .btn:hover {
-                background-color: #03c;
-            }
-
-        .description {
-            background-color: #f8f8ff;
-            border: 1px solid #eee;
-            border-radius: 10px;
-            padding: 10px 20px;
-            margin-top: 500px;
-        }
-
-            .description h2 {
-                text-align: center;
-            }
-
-        .title {
-            font-size: 24px;
-            color: #000;
-        }
-
-        .para {
-            font-size: 20px;
-            padding-left: 10px;
-            margin-bottom: 20px;
-        }
-
-        .price {
-            font-size: 22px;
-        }
-        .text-danger{
-            font-size: 18px;
-            color: #f00;
-            padding-top: 3px;
-
-        }
-    </style>
-
+   
 </head>
 <body>
         <div class="container-fluidl">
             <div class="img-content">
-                <img src="@Url.Content("~/Content/Images/"+Model.image)" alt="" height="400" />
+                <img src="@Url.Content("~/Content/Images/"+Model.image)" alt="Book Image" />
             </div>
             <div class="detail">
                 <table>

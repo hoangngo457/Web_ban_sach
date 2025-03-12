@@ -3,6 +3,7 @@
 @{
     ViewBag.Title = "GioHang";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    double total = 0;
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -25,13 +26,21 @@
         }
        
         .cart-area{
-            margin-left: 20px;
-        }
-        .image{
+            width: 100%;
             margin-left: 20px;
             margin-top: 20px;
+        }
+        .tag-prd{
+            width: 100%;
+            height: 150px;
+            border-top: 1px solid #bebebe;
+        }
+        .image{
+            padding: 5px 0px;
             position:relative;
             float:left;
+            width: 100px;
+            height: 130px;
         }
         .info{
             position: relative;
@@ -97,105 +106,55 @@
     </style>
 </head>
 <body>
-    <div class="container-fluid row">
+    <div class="container-fluid">
         <h4>Giỏ hàng</h4>
-        <div class="cart-area col-sm-8">
-            @foreach (var item in Model)
-            {
-                <div class="image">
-                    <img src="@Url.Content("~/Content/Images/"+item.sAnhBia)" width="90" height="90" />
-                </div>
-                <div class="info">
-                    <p class="name">@item.sTenSach</p>
-                    
-                    <p class="price">@String.Format("{0:0,0}", item.dDonGia) VND</p>
-                    <p class="sl">Số lượng: <strong>@item.iSoLuong</strong>
-                        
-                    </p>
-                </div>
-            }
-
-
-
-                
-        </div>
-        <div class="col-sm-3">
-            <div class="pay">
+        <div class="row">
+            <div class="cart-area col-sm-8">
                 @foreach (var item in Model)
                 {
+                    <div class="tag-prd">
+                        <div class="image">
+                            <img src="@Url.Content("~/Content/Images/"+item.sAnhBia)" width="90" height="90" />
+                        </div>
+                        <div class="info">
+                            <p class="name">@item.sTenSach</p>
+
+                            <p class="price">@String.Format("{0:0,0}", item.dDonGia) VND</p>
+                            <p class="sl">
+                                Số lượng: <strong>@item.iSoLuong</strong>
+
+                            </p>
+                        </div>
+                    </div>
+                   
+                }
+            </div>
+            <div class="col-sm-3 ">
+                <div class="pay">
                     <div class="line">
                         <p class="text">tổng cộng</p>
-                        <p class="total">@String.Format("{0:0,0}", item.ThanhTien) VND</p>
+                        <p class="total">
+                            @foreach (var item in Model)
+                            {
+                                total += item.ThanhTien;
+                            }
+                            @String.Format("{0:0,0}", total)
+                        </p>
                     </div>
-                }
-                <div class="order">
-                    @using (Html.BeginForm("DatHang", "GioHang"))
-                    {
-                        <input type="submit" value="Đặt hàng" class="btn-order"/>
-                    }
+                    <div class="order">
+                        @using (Html.BeginForm("DatHang", "GioHang"))
+                        {
+                            <input type="submit" value="Đặt hàng" class="btn-order" />
+                        }
+                    </div>
                 </div>
+
             </div>
-            
         </div>
+       
 
     </div>
 
-    @*<h2 style="text-align:center">Giỏ hàng của bạn</h2>
-    <table border="1" style="margin-left:200px;text-align:center">
-        <tr>
-            <th width="100"></th>
-
-            <th width="500">Tên sách</th>
-
-
-            <th width="150">Đơn giá</th>
-
-            <th width="100">Số lượng</th>
-
-            <th width="150">Thành tiền</th>
-        </tr>
-
-        @foreach (var item in Model)
-        {
-            <tr>
-
-                <td><img src="@Url.Content("~/Content/Images/"+item.sAnhBia)" width="70" height="70" /></td>
-                <td>@item.sTenSach</td>
-
-
-
-                <td>
-                    @String.Format("{0:0,0}", item.dDonGia) VND
-                </td>
-
-                <td>@item.iSoLuong</td>
-
-                <td>@String.Format("{0:0,0}", item.ThanhTien) VND</td>
-
-
-            </tr>
-
-        }
-        <tr>
-            <td colspan="5" style="text-align:right">Tổng tiền: </td>
-            <td> @Html.Action("GioHangPartial1", "GioHang") VND</td>
-
-        </tr>
-
-        <tr>
-            <td colspan="6" style="text-align:right; color:blue ">
-                @Html.ActionLink("Chỉnh sửa giỏ hàng", "SuaGioHang")
-            </td>
-        </tr>
-        <tr>
-            <td colspan="6" style=" font-size:20px ">
-                @using (Html.BeginForm("DatHang", "GioHang"))
-                {
-                    <input type="submit" value="Đặt hàng" style="width:200px" />
-                }
-            </td>
-        </tr>
-    </table>*@
-
+   
 </body>
 </html>

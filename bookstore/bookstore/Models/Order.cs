@@ -11,7 +11,8 @@ namespace bookstore.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Order
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,10 +20,13 @@ namespace bookstore.Models
         {
             this.OrderDetails = new HashSet<OrderDetail>();
         }
-    
+
+        [DisplayFormat(DataFormatString = "{0:D5}")]
         public int IdOrder { get; set; }
         public string status { get; set; }
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public Nullable<System.DateTime> oderDate { get; set; }
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public Nullable<System.DateTime> deliveryDate { get; set; }
         public Nullable<int> MaKH { get; set; }
     

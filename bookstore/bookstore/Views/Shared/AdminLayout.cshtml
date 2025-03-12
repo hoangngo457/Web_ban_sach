@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿
+@{
+    var currentPath = ViewContext.HttpContext.Request.Path.ToString();
+}
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -16,21 +21,25 @@
                     <a href="@Url.Action("Index", "Books", "Books")" class="name-page">Admin</a>
                 </div>
                 <div class="site-action">
-                    <a href="~/ClientLayout/Logout">Đăng xuất</a>
+                    <a href="~/ClientLayout/Home">Thoát</a> 
                 </div>
             </div>
             <div class="content">
                 <div class="hoz-navgi">
                     <ul>
-                        <li><a href="@Url.Action("Index", "Books", "Books")">Sản phẩm</a></li>
-                        <li><a href="@Url.Action("Index", "Categories","Categories")">Loại sách</a></li>
-                        <li><a href="@Url.Action("Index", "Publishers", "Publishers")">Nhà xuất bản</a></li>
-                        <li><a href="@Url.Action("Index", "Orders", "Orders")">Đơn hàng</a></li>
-                        <li><a href="@Url.Action("Index", "Users", "Users")">Tài khoản</a></li>
-                        <li><a href="@Url.Action("Index", "RevenueStatistics", "RevenueStatistics")">Thống kê bán hàng</a></li>
+                        <li><a class="@(currentPath.Contains("/Books") ? "active" : "")" href="@Url.Action("Index", "Books")">Sản phẩm</a></li>
+                        <li><a class="@(currentPath.Contains("/Categories") ? "active" : "")" href="@Url.Action("Index", "Categories")">Loại sách</a></li>
+                        <li><a class="@(currentPath.Contains("/Publishers") ? "active" : "")" href="@Url.Action("Index", "Publishers")">Nhà xuất bản</a></li>
+                        <li><a class="@(currentPath.Contains("/Orders") ? "active" : "")" href="@Url.Action("Index", "Orders")">Đơn hàng</a></li>
+                        <li><a class="@(currentPath.Contains("/Users") ? "active" : "")" href="@Url.Action("Index", "Users")">Tài khoản</a></li>
+                        <li><a class="@(currentPath.Contains("/RevenueStatistics") ? "active" : "")" href="@Url.Action("Index", "RevenueStatistics")">Thống kê bán hàng</a></li>
                     </ul>
+                    <div class="log_out">
+                        <a href="~/ClientLayout/Logout">Đăng xuất<img src="~/Content/Icon/log-out.png" alt="Log_out" /></a>
+                        
+                    </div>
+                    
                 </div>
-
                 <div class="right-side">
                     <div class="para">
                         @RenderBody()

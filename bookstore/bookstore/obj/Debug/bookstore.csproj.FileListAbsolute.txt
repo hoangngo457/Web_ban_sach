@@ -346,6 +346,8 @@ D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\obj\Debug\bookstore.csproj.
 D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\obj\Debug\bookstore.csproj.Up2Date
 D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\obj\Debug\bookstore.dll
 D:\Code C#\Web C#\Web bán sách\bookstore\bookstore\obj\Debug\bookstore.pdb
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\obj\Debug\bookstore.csproj.AssemblyReference.cache
+D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\obj\Debug\bookstore.csproj.CoreCompileInputs.cache
 D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\bookstore.dll.config
 D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\bookstore.dll
 D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\bookstore.pdb
@@ -428,8 +430,6 @@ D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\System.Web.WebPages.R
 D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\Newtonsoft.Json.xml
 D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\Antlr3.Runtime.pdb
 D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\obj\Debug\bookstore.csproj.AssemblyReference.cache
-D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\obj\Debug\bookstore.csproj.CoreCompileInputs.cache
 D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\obj\Debug\bookstore.csproj.Up2Date
 D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\obj\Debug\bookstore.dll
 D:\Code_C#\Web_C#\BookStoreWebsite\bookstore\bookstore\obj\Debug\bookstore.pdb
