@@ -464,6 +464,11 @@ button:focus, button:active {
     border-bottom: 1px solid #d6d8d9;
 }
 
+.row{
+    display: flex;
+    justify-content: space-between;
+}
+
 .copyright {
     display: flex;
     color: black;

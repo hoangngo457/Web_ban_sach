@@ -137,5 +137,44 @@ namespace bookstore.Controllers
             }
             return View(book);
         }
+
+        public ActionResult ChangePassword(int? id) 
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            User user = db.Users.Find(id);
+            if (user == null)
+            {
+                return HttpNotFound();
+            }
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult ChangePassword(User user)
+        {
+            return View();
+        }
+
+        public ActionResult UserInfo(int? userId) {
+            if (userId == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            User user = db.Users.Find(userId);
+            if (user == null) 
+            {
+                return HttpNotFound();
+            }
+            return View(user);
+        }
+
+        [HttpPost]
+        public ActionResult EditUserInfo(User user)
+        {
+            return View();
+        }
     }
 }

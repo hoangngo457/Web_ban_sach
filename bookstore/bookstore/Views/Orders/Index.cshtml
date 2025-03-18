@@ -130,7 +130,7 @@
 
             @foreach (var item in Model)
             {
-                <tr id="row_@item.IdOrder" class="row container-fluid">
+                <tr id="@item.IdOrder" class="row container-fluid">
                     <td class="col-xl-2" id="IdOrder">
                         <a class="link" href="@Url.Action("OrderDetail","Orders", new {id = item.IdOrder})">
                             @Html.DisplayFor(modelItem => item.IdOrder, new { @format = "{0:D5}" })
@@ -150,8 +150,7 @@
                         @Html.DisplayFor(modelItem => item.MaKH)
                     </td>
                     <td class="col-xl-1">
-                        <a class="btn btn-success" style="color: #fff" onclick="ConfirmDelete(@item.IdOrder)">Duyệt</a>
-
+                        <a class="btn btn-success confirm-order" style="color: #fff" data-id="@item.IdOrder">Duyệt</a>
                     </td>
                 </tr>
 
@@ -171,21 +170,27 @@
 
     <script>
 
-        var ConfirmOrder = function (orderId) {
+        $(document).ready(function () {
+            $(".confirm-order").click(function () {
+                var idOrder = $(this).data("id"); 
 
-            $.ajax({
+                //console.log(idOrder);
 
-                type: "POST",
-                url: "/Orders/ConfirmOrder",
-                data: { orderId: $("#IdOrder").val(), },
-                success: function (result) {
-                    location.reload();
-
+                if (confirm("Bạn có chắc chắn muốn duyệt đơn hàng #" + idOrder + " không?")) {
+                    $.ajax({
+                        type: "POST",
+                        url: "/Orders/ConfirmOrder",
+                        data: { id: idOrder },
+                        success: function (response) {
+                            location.reload();
+                        },
+                        error: function () {
+                            alert("Lỗi! Không thể duyệt đơn hàng.");
+                        }
+                    });
                 }
-
-            })
-
-        }
+            });
+        });
     </script>
 
 

@@ -33,12 +33,34 @@ namespace bookstore.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            var detail = db.OrderDetails.Where(x => x.IdOrder == id);
+            var detail = db.OrderDetails.Where(x => x.IdOrder == id).ToList();
             if (detail == null)
             {
                 return HttpNotFound();
             }
-            return View(db.OrderDetails.ToList().OrderBy(n => n.IdOrder));
+            return View(detail);
+        }
+
+        [HttpPost]
+        public ActionResult ConfirmOrder(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Order order = db.Orders.Find(id);
+            if (order == null)
+            {
+                return HttpNotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                order.status = "Đã xác nhận";
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(order);
         }
     }
 }

@@ -1,0 +1,149 @@
+﻿@model IEnumerable<bookstore.Models.OrderDetail>
+@{
+    ViewBag.Title = "OrderDetail";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+    int? total=0;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="~/Content/CSS/button.css" />
+    <title>Đơn hàng</title>
+    <style>
+        .head {
+            display: inline;
+            margin-bottom: 20px;
+        }
+
+        .search {
+            overflow: hidden;
+            width: 400px;
+            white-space: nowrap;
+            margin-right: 40px;
+            border-radius: 5px;
+            float: right;
+        }
+
+            .search .input {
+                width: 400px;
+                height: 50px;
+                background: #fff;
+                border: none;
+                font-size: 10pt;
+                float: left;
+                color: #000;
+                padding-left: 15px;
+                border-radius: 5px;
+                border-radius: 5px;
+            }
+
+        .button {
+            float: right;
+            width: 60px;
+            height: 48px;
+            padding: 10px;
+            background: #2196f3;
+            color: white;
+            font-size: 17px;
+            border: 1px solid grey;
+            border-left: none;
+            cursor: pointer;
+            margin-top: -49px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+            .button:hover {
+                background: #0b7dda;
+            }
+
+
+        .text {
+            float: right;
+            margin-right: 30px;
+        }
+
+        .order-area {
+            width: 73vw;
+        }
+
+        .link {
+            color: #000;
+            text-decoration: none;
+        }
+
+            .link:hover {
+                font-weight: bold;
+                color: #000;
+                text-decoration: none;
+            }
+        .navi{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="order-area">
+        <div class="navi">
+            <a href="~/Orders/Index"><img src="~/Content/Icon/arrow.png" /></a>
+            <h5>Đơn hàng @(Model.FirstOrDefault()?.IdOrder.ToString().PadLeft(5, '0'))</h5>
+
+        </div>
+        <table class="table table-striped container-fluid">
+            <tr class="row container-fluid">
+                <th class="col-xl-2">
+                    Mã sản phẩm
+                </th>
+                <th class="col-xl-3">
+                    Têm sản phẩm
+                </th>
+                <th class="col-xl-2">
+                    Số lượng
+                </th>
+                <th class="col-xl-2">
+                    Giá tiền
+                </th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                total += item.price;
+                <tr class="row container-fluid">
+                    <td class="col-xl-2">
+                        @Html.DisplayFor(modelItem => item.IdBook)
+                    </td>
+                    <td class="col-xl-3">
+                        @Html.DisplayFor(modelItem => item.Book.nameBook)
+                    </td>
+                    <td class="col-xl-2">
+                        @Html.DisplayFor(modelItem => item.quanlity)
+                    </td>
+                    <td class="col-xl-2">
+                        @Html.DisplayFor(modelItem => item.price)
+                    </td>
+                </tr>
+
+            }
+
+        </table>
+        <div class="row container-fluid">
+            <p class="col-xl-7"><b>Tổng tiền</b></p>
+            <span class="col-xl-2"><b>@total</b></span>
+        </div>
+
+
+    </div>
+</body>
+</html>
